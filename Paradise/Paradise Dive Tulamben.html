@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -486,6 +487,46 @@
     .btn-ghost { display: inline-block; padding: 17px 46px; margin-left: 14px; border: 1px solid rgba(255,255,255,0.22); color: var(--white); font-family: var(--ui); font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; text-decoration: none; transition: border-color 0.3s, color 0.3s; }
     .btn-ghost:hover { border-color: var(--sand); color: var(--sand); }
 
+    /* ── FAQ ── */
+    #faq { background: var(--deep); padding: 96px 60px; }
+    .faq-inner { max-width: 860px; margin: 0 auto; }
+    .faq-header { margin-bottom: 56px; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,0.07); }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: none;
+      padding: 26px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      cursor: pointer; color: var(--white);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem); font-weight: 600;
+      transition: color 0.25s;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-question.open { color: var(--accent); }
+    .faq-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,0.18); border-radius: 50%;
+      position: relative; transition: border-color 0.3s, transform 0.4s;
+    }
+    .faq-icon::before, .faq-icon::after {
+      content: ''; position: absolute; background: currentColor;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+    }
+    .faq-icon::before { width: 10px; height: 1.5px; }
+    .faq-icon::after  { width: 1.5px; height: 10px; transition: transform 0.4s, opacity 0.4s; }
+    .faq-question.open .faq-icon { border-color: var(--accent); transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.35s ease;
+    }
+    .faq-answer.open { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 0 0 28px;
+      font-family: var(--ui); font-size: 0.94rem; line-height: 1.9;
+      color: rgba(232,244,248,0.66); max-width: 720px;
+    }
+    @media (max-width: 768px) { #faq { padding: 64px 28px; } }
+
     /* ── Footer Contact ── */
     .footer-contact { padding: 36px 60px; background: var(--deep); border-top: 1px solid rgba(255,255,255,0.05); display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start; }
     .footer-contact-item { display: flex; align-items: flex-start; gap: 12px; }
@@ -578,6 +619,80 @@
       .tips-grid { grid-template-columns: 1fr !important; }
     }
   </style>
+  <!-- ── FAQ Schema (GEO + SEO) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need experience to dive the USAT Liberty wreck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No experience is needed. The Liberty wreck starts at just 3 metres depth, making it one of the most beginner-friendly wreck dives in the world. Complete beginners can join our Intro Dive (Discover Scuba) and explore the shallow sections with a dedicated guide. PADI Open Water certified divers can access the full wreck down to 18 metres, while Advanced divers can reach the deepest sections at 30 metres."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get from Bali airport to Tulamben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tulamben is approximately 2.5 hours by car from Ngurah Rai International Airport in Denpasar. We recommend hiring a private driver (around USD 30–40 one-way) or joining a shared shuttle. We are happy to recommend trusted drivers — just ask us on WhatsApp when you book."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Tulamben better than Nusa Penida or Amed for diving?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tulamben stands out for beginner accessibility, the iconic USAT Liberty wreck as a shore dive with no boat required, consistently calm conditions, and extraordinary marine biodiversity — it is widely considered one of the best shore dives in all of Asia. Nusa Penida is famous for mola-mola and manta rays but requires a boat and strong currents. Amed is quieter and great for macro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is included in the dive package price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All dive packages include: full scuba equipment (BCD, regulator, wetsuit, mask, fins, tank), a PADI-certified dive guide, underwater photos and video, drinking water, and a post-dive freshwater rinse. There are no hidden fees. For course packages, all learning materials and certification fees are also included."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best time of year to dive in Tulamben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tulamben is diveable year-round. The dry season (April to November) offers the best visibility — often exceeding 25–30 metres. Water temperature stays between 26–29°C throughout the year. The wet season (December to March) has fewer crowds and diving conditions remain good."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the PADI Open Water course take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The PADI Open Water Diver course typically takes 3 to 4 days at Paradise Dive Tulamben. Day 1 covers theory and confined water skills. Days 2–3 involve 4 open-water dives on the Liberty Wreck and Coral Garden. You leave fully certified and ready to dive anywhere in the world to 18 metres."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to dive at night in Tulamben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — Tulamben is one of Bali's best night diving locations. The Liberty Wreck transforms after dark with bioluminescent plankton, hunting lionfish, and octopus. All night dives are led by an experienced guide with full lighting equipment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book and what is the cancellation policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Message us on WhatsApp (+60 12-8001317) and we confirm within minutes. No deposit is required. We ask for 24 hours notice for cancellations or rescheduling. Payment is made on arrival at the dive centre."
+        }
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
 
@@ -989,6 +1104,100 @@
     <p class="cta-sub">Spots fill fast — especially at dawn. Message us on WhatsApp and get confirmed in minutes. Your underwater adventure starts now.</p>
     <a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I'd%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener" class="btn-primary">Book Now — Instant Confirmation</a>
     <a href="#courses" class="btn-ghost">See All Prices</a>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section id="faq">
+    <div class="faq-inner">
+      <div class="faq-header">
+        <p class="section-title faq-label">Common Questions</p>
+        <h2 class="section-heading faq-heading">Everything<br>You Want to Know</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q1">Do I need experience to dive the USAT Liberty wreck?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a1">No experience is needed. The Liberty wreck starts at just 3 metres depth, making it one of the most beginner-friendly wreck dives in the world. Complete beginners can join our Intro Dive (Discover Scuba) and explore the shallow sections with a dedicated guide. PADI Open Water certified divers can access the full wreck down to 18 metres, while Advanced divers can reach the deepest sections at 30 metres.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q2">How do I get from Bali airport to Tulamben?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a2">Tulamben is approximately 2.5 hours by car from Ngurah Rai International Airport in Denpasar. The drive takes you along the northeastern coast past Mount Agung — one of Bali's most scenic routes. We recommend hiring a private driver (around USD 30–40 one-way) or joining a shared shuttle. We are happy to recommend trusted drivers — just ask us on WhatsApp when you book.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q3">Is Tulamben better than Nusa Penida or Amed for diving?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a3">Each site has its strengths — but Tulamben offers something unique: the USAT Liberty wreck, accessible as a shore dive with no boat required. Nusa Penida is famous for mola-mola and manta rays but requires a boat and can have strong currents. Amed is quieter and great for macro. Tulamben stands out for beginner accessibility, the iconic wreck, consistently calm conditions, and extraordinary marine biodiversity — it is widely considered one of the best shore dives in all of Asia.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q4">What is included in the dive package price?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a4">All our dive packages include: full scuba equipment (BCD, regulator, wetsuit, mask, fins, tank), a PADI-certified dive guide, underwater photos and video of your dive, drinking water, and a post-dive freshwater rinse. There are no hidden fees. For course packages, all learning materials and certification fees are also included. Simply bring your swimwear, sunscreen, and a sense of adventure.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q5">What is the best time of year to dive in Tulamben?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a5">Tulamben is diveable year-round thanks to its calm, sheltered bay. The dry season (April to November) offers the best visibility — often exceeding 25–30 metres — and the calmest surface conditions. The wet season (December to March) brings occasional rain but diving conditions remain good and the site is far less crowded. Water temperature stays between 26–29°C throughout the year, so no thick wetsuit is needed.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q6">How long does the PADI Open Water course take?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a6">The PADI Open Water Diver course typically takes 3 to 4 days at Paradise Dive Tulamben. Day 1 covers online theory (which you can complete before arrival) and confined water skills in our pool. Days 2–3 involve 4 open-water training dives directly on the Liberty Wreck and Coral Garden — some of the world's most beautiful classroom dives. You leave fully certified and ready to dive anywhere in the world to 18 metres.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q7">Is it safe to dive at night in Tulamben?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a7">Yes — Tulamben is one of Bali's best night diving locations. The Liberty Wreck transforms completely after dark: bioluminescent plankton, hunting lionfish, sleeping parrotfish, and octopus emerging from the coral make every night dive a completely different experience from the day. All night dives are led by an experienced guide with full lighting equipment, and the entry point is the same gentle beach slope used during the day.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q8">How do I book and what is the cancellation policy?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner faq-a8">Booking is simple — message us directly on WhatsApp (+60 12-8001317) and we confirm within minutes. No deposit is required to hold your spot. We ask for 24 hours notice for cancellations or rescheduling. We understand that travel plans change, so we are flexible — just let us know as soon as possible and we will find a solution. Payment is made on arrival at the dive centre.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- ── Footer Contact ── -->
@@ -1491,6 +1700,22 @@
         obs.observe(el);
       });
     })();
+
+    /* ── FAQ Toggle ── */
+    window.toggleFaq = function(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-question.open').forEach(function(b) {
+        b.classList.remove('open');
+        b.nextElementSibling.classList.remove('open');
+      });
+      // Open clicked (if it was closed)
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    };
 
     /* ── Room Tour ── */
     (function() {
