@@ -12,8 +12,20 @@
   <title>Paradise Dive Tulamben | PADI Scuba Diving — Bali, Indonesia</title>
   <meta name="description" content="Walk off the beach and into the legendary USAT Liberty wreck. PADI-certified scuba courses, guided dives &amp; intro experiences in Tulamben, Bali. Book instantly via WhatsApp." />
   <meta name="keywords" content="diving Tulamben, USAT Liberty wreck, Bali scuba diving, PADI courses Tulamben, Paradise Dive Tulamben, shore diving Bali, wreck dive Bali, dive Amed" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Paradise Dive Tulamben" />
+  <meta name="publisher" content="Paradise Dive Tulamben" />
+
+  <!-- ── Geo / Local SEO ── -->
+  <meta name="geo.region" content="ID-BA" />
+  <meta name="geo.placename" content="Tulamben, Kubu, Karangasem, Bali" />
+  <meta name="geo.position" content="-8.2780953;115.593625" />
+  <meta name="ICBM" content="-8.2780953, 115.593625" />
   <link rel="canonical" href="https://paradisedivetulamben.com/" />
+
+  <!-- ── Performance: preload LCP hero image + font hints ── -->
+  <link rel="preload" as="image" href="hero.jpg" fetchpriority="high" />
+  <link rel="dns-prefetch" href="https://wa.me" />
   <link rel="alternate" hreflang="en"       href="https://paradisedivetulamben.com/?lang=en" />
   <link rel="alternate" hreflang="zh"       href="https://paradisedivetulamben.com/?lang=zh" />
   <link rel="alternate" hreflang="de"       href="https://paradisedivetulamben.com/?lang=de" />
@@ -24,13 +36,32 @@
   <link rel="alternate" hreflang="x-default" href="https://paradisedivetulamben.com/" />
   <meta name="theme-color" content="#04111e" />
 
+  <!-- ── Mobile / Web App ── -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Paradise Dive" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="icon" type="image/png" href="logo.png" />
+
   <!-- ── Open Graph ── -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://paradisedivetulamben.com/" />
   <meta property="og:title" content="Paradise Dive Tulamben | PADI Scuba Diving, Bali" />
   <meta property="og:description" content="Walk off the beach. Descend into legend. Shore diving the USAT Liberty wreck — one of the world's most accessible wreck dives, right in Tulamben, Bali." />
   <meta property="og:image" content="https://paradisedivetulamben.com/hero.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Diver descending onto the USAT Liberty wreck in Tulamben, Bali" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:site_name" content="Paradise Dive Tulamben" />
 
   <!-- ── Twitter Card ── -->
@@ -51,6 +82,7 @@
         "description": "PADI dive centre offering scuba diving courses, guided dives and intro experiences at the USAT Liberty wreck in Tulamben, Bali, Indonesia.",
         "url": "https://paradisedivetulamben.com/",
         "telephone": "+60128001317",
+        "email": "paradisedivetulamben@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Tulamben",
@@ -66,7 +98,16 @@
         "openingHours": "Mo-Su 09:00-18:00",
         "priceRange": "Rp 450,000 – Rp 5,600,000",
         "currenciesAccepted": "IDR, USD",
+        "paymentAccepted": "Credit Card, Wise, Bank Transfer, Cash",
         "image": "https://paradisedivetulamben.com/hero.jpg",
+        "logo": "https://paradisedivetulamben.com/logo.png",
+        "hasMap": "https://www.google.com/maps?q=-8.2780953,115.593625",
+        "knowsLanguage": ["en", "id", "zh", "de", "ru", "ja", "ko", "fr"],
+        "areaServed": [
+          { "@type": "Place", "name": "Tulamben, Bali" },
+          { "@type": "Place", "name": "Amed, Bali" },
+          { "@type": "Place", "name": "Bali, Indonesia" }
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Diving Services",
@@ -76,6 +117,45 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Guided Dive", "description": "Shore dives with a certified divemaster. Max 4 divers per guide." }, "price": "450000", "priceCurrency": "IDR" }
           ]
         }
+      },
+      {
+        "@type": "Course",
+        "name": "PADI Open Water Diver Course",
+        "description": "The world's most popular scuba certification. 3–4 days of theory, confined-water skills and 4 open-water dives on the USAT Liberty wreck. Certified for life to dive to 18 metres.",
+        "provider": { "@id": "https://paradisedivetulamben.com/#business" },
+        "inLanguage": "en",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "onsite",
+          "location": { "@id": "https://paradisedivetulamben.com/#business" }
+        },
+        "offers": { "@type": "Offer", "price": "4600000", "priceCurrency": "IDR", "category": "Certification" }
+      },
+      {
+        "@type": "Course",
+        "name": "PADI Advanced Open Water Course",
+        "description": "Push deeper to 30 metres, master buoyancy and navigation across 5 specialty dives at Tulamben's best dive sites.",
+        "provider": { "@id": "https://paradisedivetulamben.com/#business" },
+        "inLanguage": "en",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "onsite",
+          "location": { "@id": "https://paradisedivetulamben.com/#business" }
+        }
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "USAT Liberty Shipwreck",
+        "description": "A 120-metre WWII cargo ship torpedoed in 1942 and now resting from 3 to 30 metres off Tulamben's black sand beach — one of the most accessible shore wreck dives in the world, home to 400+ species of marine life.",
+        "url": "https://paradisedivetulamben.com/",
+        "image": "https://paradisedivetulamben.com/hero.jpg",
+        "isAccessibleForFree": false,
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.2740,
+          "longitude": 115.5935
+        },
+        "touristType": ["Scuba Divers", "Snorkellers", "Beginner Divers"]
       }
     ]
   }
@@ -1314,6 +1394,16 @@
       </div>
     </div>
     <div class="footer-contact-item">
+      <div class="footer-contact-icon">✉️</div>
+      <div>
+        <div class="footer-contact-label">Email</div>
+        <div class="footer-contact-value">
+          <a href="/cdn-cgi/l/email-protection#f585948794919c8690919c8390818099949897909bb59298949c99db969a98"><span class="__cf_email__" data-cfemail="9aeafbe8fbfef3e9fffef3ecffeeeff6fbf7f8fff4dafdf7fbf3f6b4f9f5f7">[email&#160;protected]</span></a><br>
+          We reply within 24 hours
+        </div>
+      </div>
+    </div>
+    <div class="footer-contact-item">
       <div class="footer-contact-icon">🌐</div>
       <div>
         <div class="footer-contact-label">Languages</div>
@@ -1604,7 +1694,7 @@
   <!-- ══════════════════════════════════════════════
        SCRIPTS
   ══════════════════════════════════════════════ -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* ── Bubbles ── */
     (function() {
       const bc = document.getElementById('bubbles');
