@@ -64,6 +64,7 @@
       'cta.primary':'Book Now — Instant Confirmation','cta.ghost':'See All Prices',
       'ft.addr-lbl':'Address','ft.hours-lbl':'Opening Hours','ft.hours-val':'Opens 9:00 AM daily<br>Dive by appointment available',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>Instant booking confirmation',
+      'ft.email-lbl':'Email','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>We reply within 24 hours',
       'ft.lang-lbl':'Languages','ft.lang-val':'English &amp; Indonesian<br>PADI certified instructors',
       'ft.copy':'© 2026 Paradise Dive Tulamben · Bali, Indonesia',
       'wa.btn':'Book Now','room.title':'Room Tour',
@@ -141,6 +142,7 @@
       'cta.primary':'立即预约——即时确认','cta.ghost':'查看全部价格',
       'ft.addr-lbl':'地址','ft.hours-lbl':'营业时间','ft.hours-val':'每日上午9:00开始<br>可按预约安排潜水',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>即时预约确认',
+      'ft.email-lbl':'电子邮件','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>我们将在24小时内回复',
       'ft.lang-lbl':'语言','ft.lang-val':'英语 &amp; 印尼语<br>PADI认证教练',
       'ft.copy':'© 2026 Paradise Dive Tulamben · 印度尼西亚巴厘岛',
       'wa.btn':'立即预约','room.title':'房间实拍',
@@ -219,6 +221,7 @@
       'cta.primary':'Jetzt buchen — Sofortbestätigung','cta.ghost':'Alle Preise ansehen',
       'ft.addr-lbl':'Adresse','ft.hours-lbl':'Öffnungszeiten','ft.hours-val':'Täglich ab 9:00 Uhr<br>Tauchgänge nach Termin',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>Sofortige Buchungsbestätigung',
+      'ft.email-lbl':'E-Mail','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>Wir antworten innerhalb von 24 Stunden',
       'ft.lang-lbl':'Sprachen','ft.lang-val':'Englisch &amp; Indonesisch<br>PADI-zertifizierte Instruktoren',
       'ft.copy':'© 2026 Paradise Dive Tulamben · Bali, Indonesien',
       'wa.btn':'Jetzt buchen','room.title':'Zimmer Tour',
@@ -297,6 +300,7 @@
       'cta.primary':'Забронировать — мгновенное подтверждение','cta.ghost':'Все цены',
       'ft.addr-lbl':'Адрес','ft.hours-lbl':'Часы работы','ft.hours-val':'Открыто с 9:00 ежедневно<br>Погружения по записи',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>Мгновенное подтверждение',
+      'ft.email-lbl':'Эл. почта','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>Отвечаем в течение 24 часов',
       'ft.lang-lbl':'Языки','ft.lang-val':'Английский &amp; Индонезийский<br>Инструкторы с сертификатом PADI',
       'ft.copy':'© 2026 Paradise Dive Tulamben · Бали, Индонезия',
       'wa.btn':'Забронировать','room.title':'Тур по номерам',
@@ -375,6 +379,7 @@
       'cta.primary':'今すぐ予約 — 即時確認','cta.ghost':'全料金を見る',
       'ft.addr-lbl':'住所','ft.hours-lbl':'営業時間','ft.hours-val':'毎日午前9時オープン<br>予約制でのダイブも可能',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>予約即時確認',
+      'ft.email-lbl':'メール','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>24時間以内に返信します',
       'ft.lang-lbl':'言語','ft.lang-val':'英語・インドネシア語<br>PADI認定インストラクター',
       'ft.copy':'© 2026 Paradise Dive Tulamben · インドネシア・バリ',
       'wa.btn':'今すぐ予約','room.title':'ルームツアー',
@@ -453,6 +458,7 @@
       'cta.primary':'지금 예약 — 즉시 확인','cta.ghost':'전체 가격 보기',
       'ft.addr-lbl':'주소','ft.hours-lbl':'운영 시간','ft.hours-val':'매일 오전 9시 오픈<br>예약 다이빙 가능',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>즉시 예약 확인',
+      'ft.email-lbl':'이메일','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>24시간 이내에 답변드립니다',
       'ft.lang-lbl':'언어','ft.lang-val':'영어 &amp; 인도네시아어<br>PADI 공인 강사',
       'ft.copy':'© 2026 Paradise Dive Tulamben · 인도네시아 발리',
       'wa.btn':'지금 예약','room.title':'객실 투어',
@@ -531,6 +537,7 @@
       'cta.primary':'Réserver — Confirmation immédiate','cta.ghost':'Voir tous les tarifs',
       'ft.addr-lbl':'Adresse','ft.hours-lbl':'Horaires','ft.hours-val':'Ouvert dès 9h00 tous les jours<br>Plongées sur rendez-vous',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>Confirmation de réservation instantanée',
+      'ft.email-lbl':'E-mail','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>Nous répondons sous 24 heures',
       'ft.lang-lbl':'Langues','ft.lang-val':'Anglais &amp; Indonésien<br>Instructeurs certifiés PADI',
       'ft.copy':'© 2026 Paradise Dive Tulamben · Bali, Indonésie',
       'wa.btn':'Réserver','room.title':'Visite des chambres',
@@ -760,8 +767,10 @@
     ['.footer-contact-item:nth-child(2) .footer-contact-value','ft.hours-val'],
     ['.footer-contact-item:nth-child(3) .footer-contact-label','ft.wa-lbl'],
     ['.footer-contact-item:nth-child(3) .footer-contact-value','ft.wa-val'],
-    ['.footer-contact-item:nth-child(4) .footer-contact-label','ft.lang-lbl'],
-    ['.footer-contact-item:nth-child(4) .footer-contact-value','ft.lang-val'],
+    ['.footer-contact-item:nth-child(4) .footer-contact-label','ft.email-lbl'],
+    ['.footer-contact-item:nth-child(4) .footer-contact-value','ft.email-val'],
+    ['.footer-contact-item:nth-child(5) .footer-contact-label','ft.lang-lbl'],
+    ['.footer-contact-item:nth-child(5) .footer-contact-value','ft.lang-val'],
     ['.footer-copy','ft.copy'],
 
     // WhatsApp float & room tour
@@ -801,6 +810,37 @@
   ];
 
   /* ═══════════ APPLY LANGUAGE ═══════════ */
+  /* ═══════════ PER-LANGUAGE META ═══════════ */
+  var META = {
+    en: { title:'Paradise Dive Tulamben | PADI Scuba Diving — Bali, Indonesia',
+          desc:'Walk off the beach and into the legendary USAT Liberty wreck. PADI-certified scuba courses, guided dives & intro experiences in Tulamben, Bali. Book instantly via WhatsApp.',
+          locale:'en_US' },
+    zh: { title:'图兰奔天堂潜水 | PADI 水肺潜水 — 巴厘岛，印度尼西亚',
+          desc:'从黑沙滩直接步入传奇的 USAT Liberty 沉船。PADI 认证潜水课程、导潜及体验潜水，就在巴厘岛图兰奔。通过 WhatsApp 即时预约。',
+          locale:'zh_CN' },
+    de: { title:'Paradise Dive Tulamben | PADI Tauchen — Bali, Indonesien',
+          desc:'Vom Strand direkt zum legendären USAT Liberty-Wrack. PADI-zertifizierte Tauchkurse, geführte Tauchgänge & Einführungstauchgänge in Tulamben, Bali. Sofort per WhatsApp buchen.',
+          locale:'de_DE' },
+    ru: { title:'Paradise Dive Tulamben | Дайвинг PADI — Бали, Индонезия',
+          desc:'Зайдите с пляжа прямо к легендарным обломкам USAT Liberty. Сертифицированные курсы PADI, погружения с гидом и вводные погружения в Туламбене, Бали. Бронируйте мгновенно через WhatsApp.',
+          locale:'ru_RU' },
+    ja: { title:'パラダイスダイブ・トゥランベン | PADIスキューバダイビング — バリ島',
+          desc:'ビーチから伝説のUSAT Liberty沈船へ。PADI認定ダイビングコース、ガイドダイブ、体験ダイビングをバリ島トゥランベンで。WhatsAppで今すぐ予約。',
+          locale:'ja_JP' },
+    ko: { title:'파라다이스 다이브 툴람벤 | PADI 스쿠버 다이빙 — 발리, 인도네시아',
+          desc:'해변에서 바로 전설적인 USAT Liberty 침몰선으로. PADI 공인 다이빙 코스, 가이드 다이빙, 체험 다이빙을 발리 툴람벤에서. WhatsApp으로 즉시 예약하세요.',
+          locale:'ko_KR' },
+    fr: { title:'Paradise Dive Tulamben | Plongée PADI — Bali, Indonésie',
+          desc:"De la plage à l'épave légendaire de l'USAT Liberty. Cours de plongée certifiés PADI, plongées guidées et baptêmes à Tulamben, Bali. Réservez instantanément via WhatsApp.",
+          locale:'fr_FR' },
+  };
+
+  function setMeta(name, val, attr) {
+    attr = attr || 'name';
+    var el = document.querySelector('meta[' + attr + '="' + name + '"]');
+    if (el) el.setAttribute('content', val);
+  }
+
   function applyLang(lang) {
     const t = T[lang] || T.en;
     MAP.forEach(function(entry) {
@@ -812,6 +852,16 @@
       });
     });
     document.documentElement.lang = lang;
+
+    // Update meta tags for SEO (per-language title & description)
+    var m = META[lang] || META.en;
+    document.title = m.title;
+    setMeta('description', m.desc);
+    setMeta('og:title', m.title, 'property');
+    setMeta('og:description', m.desc, 'property');
+    setMeta('og:locale', m.locale, 'property');
+    setMeta('twitter:title', m.title);
+    setMeta('twitter:description', m.desc);
   }
 
   /* ═══════════ PUBLIC: setLang ═══════════ */
