@@ -62,6 +62,7 @@
       'cta.heading':'Don\'t Just Dream It.<br><span style="color:var(--accent);font-style:italic;">Dive It.</span>',
       'cta.sub':'Spots fill fast — especially at dawn. Message us on WhatsApp and get confirmed in minutes. Your underwater adventure starts now.',
       'cta.primary':'Book Now — Instant Confirmation','cta.ghost':'See All Prices',
+      'qf.eyebrow':'Plan Your Trip','qf.heading':'Request a Personal Quote','qf.l.name':'Your Name','qf.l.contact':'Contact','qf.l.date':'Planned Travel Date','qf.l.interest':'Interest','qf.l.notes':'Additional Notes','qf.l.notes.hint':'(group size, special requests, etc.)','qf.ph.name':'Full Name','qf.ph.contact':'WhatsApp / WeChat / Email','qf.ph.notes':'Tell us more about your plans...','qf.opt.default':'Select…','qf.opt.intro':'Intro Dive (no certification)','qf.opt.guided':'Guided Dive (certified divers)','qf.opt.owd':'PADI Open Water Course','qf.opt.aowd':'PADI Advanced Open Water','qf.opt.rescue':'PADI Rescue Diver','qf.opt.nitrox':'Nitrox (EANx) Course','qf.opt.muck':'Muck Diving','qf.opt.pkg':'Room + Diving Package','qf.opt.unsure':'Not sure yet — need advice','qf.submit':'Get Quote · Connect via WhatsApp','qf.privacy':'Your information is kept confidential and used only for travel consultation. We do not share it with third parties.',
       'ft.addr-lbl':'Address','ft.hours-lbl':'Opening Hours','ft.hours-val':'Opens 9:00 AM daily<br>Dive by appointment available',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br><a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>Instant booking confirmation',
       'ft.email-lbl':'Email','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>We reply within 24 hours',
@@ -140,6 +141,7 @@
       'cta.heading':'别只是梦想，<br><span style="color:var(--accent);font-style:italic;">去潜水吧。</span>',
       'cta.sub':'名额有限——尤其是黎明潜水。通过WhatsApp联系我们，几分钟内即可确认。您的水下冒险现在开始。',
       'cta.primary':'立即预约——即时确认','cta.ghost':'查看全部价格',
+      'qf.eyebrow':'规划您的行程','qf.heading':'获取专属报价','qf.l.name':'您的姓名','qf.l.contact':'联系方式','qf.l.date':'计划旅行日期','qf.l.interest':'感兴趣的项目','qf.l.notes':'补充说明','qf.l.notes.hint':'（团队人数、特殊要求等）','qf.ph.name':'全名','qf.ph.contact':'WhatsApp / 微信 / 邮箱','qf.ph.notes':'告诉我们更多您的计划...','qf.opt.default':'请选择…','qf.opt.intro':'体验潜水（无需证书）','qf.opt.guided':'导潜（持证潜水员）','qf.opt.owd':'PADI 开放水域课程','qf.opt.aowd':'PADI 进阶开放水域','qf.opt.rescue':'PADI 救援潜水员','qf.opt.nitrox':'高氧（EANx）课程','qf.opt.muck':'淤泥潜水','qf.opt.pkg':'住宿 + 潜水套餐','qf.opt.unsure':'尚未确定 — 需要建议','qf.submit':'获取报价 · 通过 WhatsApp 联系','qf.privacy':'您的信息将严格保密，仅用于旅行咨询。我们不会与第三方共享。',
       'ft.addr-lbl':'地址','ft.hours-lbl':'营业时间','ft.hours-val':'每日上午9:00开始<br>可按预约安排潜水',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br><a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>即时预约确认',
       'ft.email-lbl':'电子邮件','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>我们将在24小时内回复',
@@ -219,6 +221,7 @@
       'cta.heading':'Nicht nur träumen.<br><span style="color:var(--accent);font-style:italic;">Tauchen.</span>',
       'cta.sub':'Plätze sind begehrt — besonders bei Sonnenaufgang. Schreib uns auf WhatsApp und werde in Minuten bestätigt.',
       'cta.primary':'Jetzt buchen — Sofortbestätigung','cta.ghost':'Alle Preise ansehen',
+      'qf.eyebrow':'Plane deine Reise','qf.heading':'Persönliches Angebot anfragen','qf.l.name':'Dein Name','qf.l.contact':'Kontakt','qf.l.date':'Geplantes Reisedatum','qf.l.interest':'Interesse','qf.l.notes':'Zusätzliche Hinweise','qf.l.notes.hint':'(Gruppengröße, Sonderwünsche usw.)','qf.ph.name':'Vollständiger Name','qf.ph.contact':'WhatsApp / WeChat / E-Mail','qf.ph.notes':'Erzähl uns mehr über deine Pläne...','qf.opt.default':'Auswählen…','qf.opt.intro':'Einführungstauchgang (ohne Schein)','qf.opt.guided':'Geführter Tauchgang (zertifiziert)','qf.opt.owd':'PADI Open Water Kurs','qf.opt.aowd':'PADI Advanced Open Water','qf.opt.rescue':'PADI Rescue Diver','qf.opt.nitrox':'Nitrox (EANx) Kurs','qf.opt.muck':'Muck Diving','qf.opt.pkg':'Zimmer + Tauchpaket','qf.opt.unsure':'Noch unsicher — Beratung nötig','qf.submit':'Angebot · Via WhatsApp verbinden','qf.privacy':'Deine Daten werden vertraulich behandelt und nur zur Reiseberatung verwendet. Wir geben sie nicht an Dritte weiter.',
       'ft.addr-lbl':'Adresse','ft.hours-lbl':'Öffnungszeiten','ft.hours-val':'Täglich ab 9:00 Uhr<br>Tauchgänge nach Termin',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br><a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>Sofortige Buchungsbestätigung',
       'ft.email-lbl':'E-Mail','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>Wir antworten innerhalb von 24 Stunden',
@@ -298,6 +301,7 @@
       'cta.heading':'Не просто мечтай.<br><span style="color:var(--accent);font-style:italic;">Ныряй.</span>',
       'cta.sub':'Места кончаются быстро — особенно на рассвете. Напиши нам в WhatsApp и получи подтверждение за несколько минут.',
       'cta.primary':'Забронировать — мгновенное подтверждение','cta.ghost':'Все цены',
+      'qf.eyebrow':'Спланируйте поездку','qf.heading':'Запросить персональный расчёт','qf.l.name':'Ваше имя','qf.l.contact':'Контакт','qf.l.date':'Планируемая дата поездки','qf.l.interest':'Интерес','qf.l.notes':'Дополнительно','qf.l.notes.hint':'(размер группы, особые пожелания и т.д.)','qf.ph.name':'Полное имя','qf.ph.contact':'WhatsApp / WeChat / Email','qf.ph.notes':'Расскажите подробнее о ваших планах...','qf.opt.default':'Выберите…','qf.opt.intro':'Вводное погружение (без сертификата)','qf.opt.guided':'Погружение с гидом (сертифицированные)','qf.opt.owd':'Курс PADI Open Water','qf.opt.aowd':'PADI Advanced Open Water','qf.opt.rescue':'PADI Rescue Diver','qf.opt.nitrox':'Курс Nitrox (EANx)','qf.opt.muck':'Мак-дайвинг','qf.opt.pkg':'Номер + дайвинг пакет','qf.opt.unsure':'Ещё не уверен — нужен совет','qf.submit':'Получить расчёт · Связаться через WhatsApp','qf.privacy':'Ваша информация конфиденциальна и используется только для консультации. Мы не передаём её третьим лицам.',
       'ft.addr-lbl':'Адрес','ft.hours-lbl':'Часы работы','ft.hours-val':'Открыто с 9:00 ежедневно<br>Погружения по записи',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br><a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>Мгновенное подтверждение',
       'ft.email-lbl':'Эл. почта','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>Отвечаем в течение 24 часов',
@@ -377,6 +381,7 @@
       'cta.heading':'夢見るだけじゃなく。<br><span style="color:var(--accent);font-style:italic;">潜ろう。</span>',
       'cta.sub':'特に夜明けダイブは早い者勝ち。WhatsAppでメッセージを送れば数分で確認完了。あなたの水中の冒険が今始まる。',
       'cta.primary':'今すぐ予約 — 即時確認','cta.ghost':'全料金を見る',
+      'qf.eyebrow':'旅行を計画する','qf.heading':'パーソナル見積もりを依頼','qf.l.name':'お名前','qf.l.contact':'連絡先','qf.l.date':'旅行予定日','qf.l.interest':'ご興味','qf.l.notes':'追加メモ','qf.l.notes.hint':'（人数、特別なご要望など）','qf.ph.name':'フルネーム','qf.ph.contact':'WhatsApp / WeChat / メール','qf.ph.notes':'ご予定について詳しくお聞かせください...','qf.opt.default':'選択…','qf.opt.intro':'体験ダイビング（認定不要）','qf.opt.guided':'ガイドダイブ（認定ダイバー）','qf.opt.owd':'PADIオープンウォーターコース','qf.opt.aowd':'PADIアドバンスオープンウォーター','qf.opt.rescue':'PADIレスキューダイバー','qf.opt.nitrox':'ナイトロックス（EANx）コース','qf.opt.muck':'マックダイビング','qf.opt.pkg':'宿泊＋ダイビングパッケージ','qf.opt.unsure':'まだ未定 — アドバイスが欲しい','qf.submit':'見積もり · WhatsAppで連絡','qf.privacy':'お客様の情報は機密として扱い、旅行相談のみに使用します。第三者と共有することはありません。',
       'ft.addr-lbl':'住所','ft.hours-lbl':'営業時間','ft.hours-val':'毎日午前9時オープン<br>予約制でのダイブも可能',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br><a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>予約即時確認',
       'ft.email-lbl':'メール','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>24時間以内に返信します',
@@ -456,6 +461,7 @@
       'cta.heading':'꿈만 꾸지 말고.<br><span style="color:var(--accent);font-style:italic;">다이빙하세요.</span>',
       'cta.sub':'자리가 빨리 찹니다 — 특히 새벽 다이빙은요. WhatsApp으로 문의하시면 몇 분 안에 확인해 드립니다.',
       'cta.primary':'지금 예약 — 즉시 확인','cta.ghost':'전체 가격 보기',
+      'qf.eyebrow':'여행 계획하기','qf.heading':'맞춤 견적 요청','qf.l.name':'성함','qf.l.contact':'연락처','qf.l.date':'예정 여행 날짜','qf.l.interest':'관심 항목','qf.l.notes':'추가 메모','qf.l.notes.hint':'(인원수, 특별 요청 등)','qf.ph.name':'전체 이름','qf.ph.contact':'WhatsApp / WeChat / 이메일','qf.ph.notes':'계획에 대해 더 알려주세요...','qf.opt.default':'선택…','qf.opt.intro':'체험 다이빙 (자격증 불필요)','qf.opt.guided':'가이드 다이빙 (자격증 보유자)','qf.opt.owd':'PADI 오픈워터 코스','qf.opt.aowd':'PADI 어드밴스드 오픈워터','qf.opt.rescue':'PADI 레스큐 다이버','qf.opt.nitrox':'나이트록스 (EANx) 코스','qf.opt.muck':'먹 다이빙','qf.opt.pkg':'객실 + 다이빙 패키지','qf.opt.unsure':'아직 미정 — 상담 필요','qf.submit':'견적 받기 · WhatsApp으로 연결','qf.privacy':'귀하의 정보는 기밀로 유지되며 여행 상담에만 사용됩니다. 제3자와 공유하지 않습니다.',
       'ft.addr-lbl':'주소','ft.hours-lbl':'운영 시간','ft.hours-val':'매일 오전 9시 오픈<br>예약 다이빙 가능',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br><a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>즉시 예약 확인',
       'ft.email-lbl':'이메일','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>24시간 이내에 답변드립니다',
@@ -535,6 +541,7 @@
       'cta.heading':'Ne vous contentez pas de rêver.<br><span style="color:var(--accent);font-style:italic;">Plongez.</span>',
       'cta.sub':"Les places partent vite — surtout à l\'aube. Écrivez-nous sur WhatsApp et obtenez une confirmation en quelques minutes.",
       'cta.primary':'Réserver — Confirmation immédiate','cta.ghost':'Voir tous les tarifs',
+      'qf.eyebrow':'Planifiez votre voyage','qf.heading':'Demander un devis personnalisé','qf.l.name':'Votre nom','qf.l.contact':'Contact','qf.l.date':'Date de voyage prévue','qf.l.interest':'Intérêt','qf.l.notes':'Notes supplémentaires','qf.l.notes.hint':'(taille du groupe, demandes spéciales, etc.)','qf.ph.name':'Nom complet','qf.ph.contact':'WhatsApp / WeChat / E-mail','qf.ph.notes':'Parlez-nous de vos projets...','qf.opt.default':'Sélectionner…','qf.opt.intro':'Plongée découverte (sans brevet)','qf.opt.guided':'Plongée guidée (plongeurs certifiés)','qf.opt.owd':'Cours PADI Open Water','qf.opt.aowd':'PADI Advanced Open Water','qf.opt.rescue':'PADI Rescue Diver','qf.opt.nitrox':'Cours Nitrox (EANx)','qf.opt.muck':'Muck Diving','qf.opt.pkg':'Chambre + forfait plongée','qf.opt.unsure':'Pas encore sûr — besoin de conseils','qf.submit':'Devis · Contacter via WhatsApp','qf.privacy':'Vos informations restent confidentielles et servent uniquement à la consultation. Nous ne les partageons pas avec des tiers.',
       'ft.addr-lbl':'Adresse','ft.hours-lbl':'Horaires','ft.hours-val':'Ouvert dès 9h00 tous les jours<br>Plongées sur rendez-vous',
       'ft.wa-lbl':'WhatsApp','ft.wa-val':'<a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br><a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I%27d%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>Confirmation de réservation instantanée',
       'ft.email-lbl':'E-mail','ft.email-val':'<a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>Nous répondons sous 24 heures',
@@ -807,6 +814,35 @@
     ['#nitrox-modal .modal-book-btn','modal.book.course'],
     ['#intro-dive-modal .modal-book-btn','modal.book'],
     ['#guided-dive-modal .modal-book-btn','modal.book'],
+
+    // Quote form (innerHTML targets)
+    ['.qf-eyebrow','qf.eyebrow'],
+    ['.qf-heading','qf.heading'],
+    ['.qf-l-name','qf.l.name'],
+    ['.qf-l-contact','qf.l.contact'],
+    ['.qf-l-date','qf.l.date'],
+    ['.qf-l-interest','qf.l.interest'],
+    ['.qf-l-notes','qf.l.notes'],
+    ['.qf-l-notes-hint','qf.l.notes.hint'],
+    ['.qf-opt-default','qf.opt.default'],
+    ['.qf-opt-intro','qf.opt.intro'],
+    ['.qf-opt-guided','qf.opt.guided'],
+    ['.qf-opt-owd','qf.opt.owd'],
+    ['.qf-opt-aowd','qf.opt.aowd'],
+    ['.qf-opt-rescue','qf.opt.rescue'],
+    ['.qf-opt-nitrox','qf.opt.nitrox'],
+    ['.qf-opt-muck','qf.opt.muck'],
+    ['.qf-opt-pkg','qf.opt.pkg'],
+    ['.qf-opt-unsure','qf.opt.unsure'],
+    ['.qf-submit-text','qf.submit'],
+    ['.qf-privacy','qf.privacy'],
+  ];
+
+  /* Placeholder attributes (set via setAttribute, not innerHTML) */
+  var PLACEHOLDER_MAP = [
+    ['#qf-name','qf.ph.name'],
+    ['#qf-contact','qf.ph.contact'],
+    ['#qf-notes','qf.ph.notes'],
   ];
 
   /* ═══════════ APPLY LANGUAGE ═══════════ */
@@ -852,6 +888,15 @@
       });
     });
     document.documentElement.lang = lang;
+
+    // Placeholder attributes
+    PLACEHOLDER_MAP.forEach(function(entry) {
+      var val = t[entry[1]];
+      if (val == null) return;
+      document.querySelectorAll(entry[0]).forEach(function(el) {
+        el.setAttribute('placeholder', val);
+      });
+    });
 
     // Update meta tags for SEO (per-language title & description)
     var m = META[lang] || META.en;
