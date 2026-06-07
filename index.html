@@ -1,10 +1,20 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
 </script>
 
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2G09F7820Y"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2G09F7820Y');
+  </script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -24,7 +34,7 @@
   <link rel="canonical" href="https://paradisedivetulamben.com/" />
 
   <!-- ── Performance: preload LCP hero image + font hints ── -->
-  <link rel="preload" as="image" href="hero.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="Paradise/hero.jpg" fetchpriority="high" />
   <link rel="dns-prefetch" href="https://wa.me" />
   <link rel="alternate" hreflang="en"       href="https://paradisedivetulamben.com/?lang=en" />
   <link rel="alternate" hreflang="zh"       href="https://paradisedivetulamben.com/?lang=zh" />
@@ -42,8 +52,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Paradise Dive" />
-  <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="Paradise/logo.png" />
+  <link rel="icon" type="image/png" href="Paradise/logo.png" />
 
   <!-- ── Open Graph ── -->
   <meta property="og:type" content="website" />
@@ -161,7 +171,7 @@
   }
   </script>
 
-  <script src="image-slot.js"></script>
+  <script src="Paradise/image-slot.js"></script>
 
   <!-- ── Google Fonts: Cormorant Garamond ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -241,7 +251,7 @@
     .hero-bg-outer { position: absolute; inset: 0; overflow: hidden; will-change: transform; }
     .hero-bg {
       position: absolute; inset: -12%;
-      background: url('hero.jpg') center/cover no-repeat;
+      background: url('Paradise/hero.jpg') center/cover no-repeat;
       animation: slowZoom 26s ease-in-out infinite alternate;
     }
     @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.09); } }
@@ -412,10 +422,10 @@
     #intro { padding: 110px 60px; position: relative; display: flex; align-items: flex-start; gap: 80px; flex-wrap: wrap; overflow: hidden; }
     .intro-slide { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity 1.5s ease-in-out; opacity: 0; }
     .intro-slide.active { opacity: 1; }
-    .intro-slide:nth-child(1) { background-image: url('intro-bg1.jpg'); }
-    .intro-slide:nth-child(2) { background-image: url('paradise/3285.JPG'); }
-    .intro-slide:nth-child(3) { background-image: url('intro-bg2.jpg'); }
-    .intro-slide:nth-child(4) { background-image: url('paradise/3280.JPG'); }
+    .intro-slide:nth-child(1) { background-image: url('Paradise/intro-bg1.jpg'); }
+    .intro-slide:nth-child(2) { background-image: url('Paradise/paradise/3285.JPG'); }
+    .intro-slide:nth-child(3) { background-image: url('Paradise/intro-bg2.jpg'); }
+    .intro-slide:nth-child(4) { background-image: url('Paradise/paradise/3280.JPG'); }
     #intro::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(4,17,30,0.72) 0%, rgba(5,28,44,0.80) 100%); }
     #intro > *:not(.intro-slide) { position: relative; z-index: 2; }
     #intro .text-block { flex: 1; min-width: 300px; }
@@ -427,7 +437,7 @@
 
     /* ── Story ── */
     #story {
-      padding: 0; background: url('story-bg.jpg') center/cover no-repeat;
+      padding: 0; background: url('Paradise/story-bg.jpg') center/cover no-repeat;
       position: relative; min-height: 540px; display: flex; align-items: center;
     }
     #story::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,17,30,0.93) 35%, rgba(4,17,30,0.52) 100%); }
@@ -541,7 +551,7 @@
     }
 
     /* ── Practical ── */
-    #practical { padding: 110px 60px; background: url('practical-bg.jpg') center/cover no-repeat fixed; position: relative; }
+    #practical { padding: 110px 60px; background: url('Paradise/practical-bg.jpg') center/cover no-repeat fixed; position: relative; }
     #practical::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(4,17,30,0.93) 0%, rgba(8,131,149,0.48) 100%); }
     .prac-inner { position: relative; z-index: 1; }
     .prac-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.4rem, 4.8vw, 3.6rem); font-weight: 700; text-transform: uppercase; margin-bottom: 18px; }
@@ -591,7 +601,7 @@
     .btn-learn-more:hover { background: rgba(196,164,106,0.1); border-color: var(--sand); }
 
     /* ── Pricing ── */
-    #courses { padding: 110px 60px; background: url('courses-bg.jpg') center/cover no-repeat fixed; position: relative; }
+    #courses { padding: 110px 60px; background: url('Paradise/courses-bg.jpg') center/cover no-repeat fixed; position: relative; }
     #courses::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(4,17,30,0.90) 0%, rgba(5,28,44,0.78) 50%, rgba(4,17,30,0.88) 100%); }
     #courses > * { position: relative; z-index: 1; }
     .courses-header { max-width: 640px; margin-bottom: 64px; }
@@ -627,71 +637,6 @@
     .btn-primary:hover { background: var(--white); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,200,232,0.25); }
     .btn-ghost { display: inline-block; padding: 17px 46px; margin-left: 14px; border: 1px solid rgba(255,255,255,0.22); color: var(--white); font-family: var(--ui); font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; text-decoration: none; transition: border-color 0.3s, color 0.3s; }
     .btn-ghost:hover { border-color: var(--sand); color: var(--sand); }
-
-    /* ── Quote Form ── */
-    .quote-form-wrap {
-      max-width: 620px; margin: 56px auto 0; text-align: left;
-      background: rgba(8,131,149,0.06);
-      border: 1px solid rgba(0,200,232,0.14);
-      backdrop-filter: blur(10px);
-      padding: 44px 44px 40px;
-      position: relative;
-    }
-    .quote-form-title {
-      font-family: var(--ui); font-size: 0.6rem; letter-spacing: 4px;
-      text-transform: uppercase; color: var(--sand); margin-bottom: 8px; text-align: center;
-    }
-    .quote-form-sub {
-      font-family: var(--display); font-size: 1.5rem; font-weight: 600;
-      color: var(--white); margin-bottom: 30px; text-align: center; letter-spacing: 0.5px;
-    }
-    .qf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
-    .qf-field { display: flex; flex-direction: column; }
-    .qf-field.full { grid-column: 1 / -1; }
-    .qf-label {
-      font-family: var(--ui); font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase;
-      color: rgba(232,244,248,0.62); margin-bottom: 8px;
-    }
-    .qf-label .req { color: var(--accent); margin-left: 3px; }
-    .qf-input, .qf-select, .qf-textarea {
-      font-family: var(--ui); font-size: 0.9rem; color: var(--white);
-      background: rgba(4,17,30,0.5);
-      border: 1px solid rgba(255,255,255,0.14);
-      padding: 12px 14px; border-radius: 2px;
-      transition: border-color 0.25s, background 0.25s;
-      width: 100%;
-    }
-    .qf-input::placeholder, .qf-textarea::placeholder { color: rgba(232,244,248,0.3); }
-    .qf-input:focus, .qf-select:focus, .qf-textarea:focus {
-      outline: none; border-color: var(--accent); background: rgba(4,17,30,0.8);
-    }
-    .qf-input:invalid:not(:placeholder-shown) { border-color: rgba(220,90,90,0.5); }
-    .qf-select { cursor: pointer; appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2300c8e8' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
-    }
-    .qf-select option { background: var(--deep); color: var(--white); }
-    .qf-textarea { resize: vertical; min-height: 88px; line-height: 1.6; }
-    .qf-input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(1) saturate(4) hue-rotate(150deg); cursor: pointer; }
-    .qf-submit {
-      grid-column: 1 / -1; margin-top: 6px;
-      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-      padding: 16px 32px; background: var(--accent); color: var(--navy);
-      font-family: var(--ui); font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700;
-      border: none; cursor: pointer; transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-      width: 100%;
-    }
-    .qf-submit:hover { background: var(--white); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,200,232,0.25); }
-    .qf-submit svg { width: 17px; height: 17px; }
-    .qf-privacy {
-      grid-column: 1 / -1; margin-top: 14px;
-      font-family: var(--ui); font-size: 0.66rem; line-height: 1.6;
-      color: rgba(232,244,248,0.36); text-align: center;
-    }
-    @media (max-width: 640px) {
-      .quote-form-wrap { padding: 32px 22px 28px; }
-      .qf-grid { grid-template-columns: 1fr; }
-    }
 
     /* ── FAQ ── */
     #faq { background: var(--deep); padding: 96px 60px; }
@@ -912,7 +857,7 @@
 
   <!-- ── Navigation ── -->
   <nav id="navbar">
-    <a class="nav-logo" href="#home"><img src="logo.png" alt="Paradise Dive Tulamben" /></a>
+    <a class="nav-logo" href="#home"><img src="Paradise/logo.png" alt="Paradise Dive Tulamben" /></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1042,7 +987,7 @@
 
     <div class="dive-card">
       <div class="card-image">
-        <img src="GOPR1314.jpg" alt="USAT Liberty Wreck dive, Tulamben Bali" loading="lazy" />
+        <img src="Paradise/GOPR1314.jpg" alt="USAT Liberty Wreck dive, Tulamben Bali" loading="lazy" />
         <span class="card-badge">Top Pick</span>
       </div>
       <div class="card-content">
@@ -1083,7 +1028,7 @@
 
     <div class="dive-card">
       <div class="card-image">
-        <img src="dropoff.jpg" alt="Tulamben Drop Off wall dive, Bali" loading="lazy" />
+        <img src="Paradise/dropoff.jpg" alt="Tulamben Drop Off wall dive, Bali" loading="lazy" />
         <span class="card-badge sand">Dramatic Wall</span>
       </div>
       <div class="card-content">
@@ -1124,7 +1069,7 @@
 
     <div class="dive-card">
       <div class="card-image">
-        <img src="coral-garden.jpg" alt="Coral Garden dive site, Tulamben Bali" loading="lazy" />
+        <img src="Paradise/coral-garden.jpg" alt="Coral Garden dive site, Tulamben Bali" loading="lazy" />
         <span class="card-badge">Beginner Friendly</span>
       </div>
       <div class="card-content">
@@ -1172,11 +1117,11 @@
       <p class="gallery-hint">Drag to explore — professional gear, warm spaces, everything included</p>
     </div>
     <div class="gallery-track" id="galleryTrack">
-      <div class="gallery-item"><img src="dc/DC1.jpg" alt="Dive Centre Equipment Room — Wetsuits &amp; BCDs" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">01</div></div>
-      <div class="gallery-item"><img src="dc/DC2.jpg" alt="Dive Centre — BCDs, Fins &amp; Safety Equipment" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">02</div></div>
-      <div class="gallery-item"><img src="dc/DC3.jpg" alt="Dive Centre — Freediving Fins &amp; Mask Storage" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">03</div></div>
-      <div class="gallery-item"><img src="dc/DC4.jpg" alt="Paradise Dive — Dining Area &amp; Briefing Space" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">04</div></div>
-      <div class="gallery-item"><img src="dc/DC5.jpg" alt="Paradise Dive — Classroom &amp; Briefing Room" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">05</div></div>
+      <div class="gallery-item"><img src="Paradise/dc/DC1.jpg" alt="Dive Centre Equipment Room — Wetsuits &amp; BCDs" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">01</div></div>
+      <div class="gallery-item"><img src="Paradise/dc/DC2.jpg" alt="Dive Centre — BCDs, Fins &amp; Safety Equipment" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">02</div></div>
+      <div class="gallery-item"><img src="Paradise/dc/DC3.jpg" alt="Dive Centre — Freediving Fins &amp; Mask Storage" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">03</div></div>
+      <div class="gallery-item"><img src="Paradise/dc/DC4.jpg" alt="Paradise Dive — Dining Area &amp; Briefing Space" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">04</div></div>
+      <div class="gallery-item"><img src="Paradise/dc/DC5.jpg" alt="Paradise Dive — Classroom &amp; Briefing Room" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">05</div></div>
     </div>
   </section>
 
@@ -1319,50 +1264,6 @@
     <p class="cta-sub">Spots fill fast — especially at dawn. Message us on WhatsApp and get confirmed in minutes. Your underwater adventure starts now.</p>
     <a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I'd%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener" class="btn-primary">Book Now — Instant Confirmation</a>
     <a href="#courses" class="btn-ghost">See All Prices</a>
-
-    <!-- ── Quote Request Form ── -->
-    <form class="quote-form-wrap" id="quoteForm" onsubmit="submitQuote(event)">
-      <p class="quote-form-title qf-eyebrow">Plan Your Trip</p>
-      <p class="quote-form-sub qf-heading">Request a Personal Quote</p>
-      <div class="qf-grid">
-        <div class="qf-field">
-          <label class="qf-label" for="qf-name"><span class="qf-l-name">Your Name</span><span class="req">*</span></label>
-          <input class="qf-input" type="text" id="qf-name" name="name" placeholder="Full Name" required />
-        </div>
-        <div class="qf-field">
-          <label class="qf-label" for="qf-contact"><span class="qf-l-contact">Contact</span><span class="req">*</span></label>
-          <input class="qf-input" type="text" id="qf-contact" name="contact" placeholder="WhatsApp / WeChat / Email" required />
-        </div>
-        <div class="qf-field">
-          <label class="qf-label" for="qf-date"><span class="qf-l-date">Planned Travel Date</span><span class="req">*</span></label>
-          <input class="qf-input" type="date" id="qf-date" name="date" required />
-        </div>
-        <div class="qf-field">
-          <label class="qf-label" for="qf-interest"><span class="qf-l-interest">Interest</span><span class="req">*</span></label>
-          <select class="qf-select" id="qf-interest" name="interest" required>
-            <option value="" disabled selected class="qf-opt-default">Select…</option>
-            <option value="Intro Dive" class="qf-opt-intro">Intro Dive (no certification)</option>
-            <option value="Guided Dive" class="qf-opt-guided">Guided Dive (certified divers)</option>
-            <option value="Open Water Course" class="qf-opt-owd">PADI Open Water Course</option>
-            <option value="Advanced Open Water" class="qf-opt-aowd">PADI Advanced Open Water</option>
-            <option value="Rescue Diver" class="qf-opt-rescue">PADI Rescue Diver</option>
-            <option value="Nitrox (EANx)" class="qf-opt-nitrox">Nitrox (EANx) Course</option>
-            <option value="Muck Diving" class="qf-opt-muck">Muck Diving</option>
-            <option value="Room + Diving Package" class="qf-opt-pkg">Room + Diving Package</option>
-            <option value="Not sure yet" class="qf-opt-unsure">Not sure yet — need advice</option>
-          </select>
-        </div>
-        <div class="qf-field full">
-          <label class="qf-label" for="qf-notes"><span class="qf-l-notes">Additional Notes</span> <span style="color:rgba(232,244,248,0.3);text-transform:none;letter-spacing:0;" class="qf-l-notes-hint">(group size, special requests, etc.)</span></label>
-          <textarea class="qf-textarea" id="qf-notes" name="notes" placeholder="Tell us more about your plans..."></textarea>
-        </div>
-        <button class="qf-submit" type="submit">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
-          <span class="qf-submit-text">Get Quote · Connect via WhatsApp</span>
-        </button>
-        <p class="qf-privacy">Your information is kept confidential and used only for travel consultation. We do not share it with third parties.</p>
-      </div>
-    </form>
   </section>
 
   <!-- ── FAQ ── -->
@@ -1508,7 +1409,7 @@
       <div>
         <div class="footer-contact-label">Email</div>
         <div class="footer-contact-value">
-          <a href="/cdn-cgi/l/email-protection#3c4c5d4e5d58554f5958554a594849505d515e59527c5b515d5550125f5351"><span class="__cf_email__" data-cfemail="a8d8c9dac9ccc1dbcdccc1decddcddc4c9c5cacdc6e8cfc5c9c1c486cbc7c5">[email&#160;protected]</span></a><br>
+          <a href="/cdn-cgi/l/email-protection#bdcddccfdcd9d4ced8d9d4cbd8c9c8d1dcd0dfd8d3fddad0dcd4d193ded2d0"><span class="__cf_email__" data-cfemail="90e0f1e2f1f4f9e3f5f4f9e6f5e4e5fcf1fdf2f5fed0f7fdf1f9fcbef3fffd">[email&#160;protected]</span></a><br>
           We reply within 24 hours
         </div>
       </div>
@@ -1558,47 +1459,47 @@
 
     <div class="room-modal-stage">
       <div class="room-modal-img active" data-index="0">
-        <img src="intro-bg1.jpg" alt="Infinity Pool &amp; Ocean View" />
+        <img src="Paradise/intro-bg1.jpg" alt="Infinity Pool &amp; Ocean View" />
         <div class="room-modal-caption">Infinity Pool &amp; Ocean View</div>
       </div>
       <div class="room-modal-img" data-index="1">
-        <img src="intro-bg2.jpg" alt="Aerial — Beachfront Property" />
+        <img src="Paradise/intro-bg2.jpg" alt="Aerial — Beachfront Property" />
         <div class="room-modal-caption">Aerial — Beachfront Property</div>
       </div>
       <div class="room-modal-img" data-index="2">
-        <img src="room/double-room-overview.JPG" alt="Double Room — Overview" />
+        <img src="Paradise/room/double-room-overview.JPG" alt="Double Room — Overview" />
         <div class="room-modal-caption">Double Room — Overview</div>
       </div>
       <div class="room-modal-img" data-index="3">
-        <img src="room/bedroom-art.JPG" alt="Double Room — Balinese Artwork" />
+        <img src="Paradise/room/bedroom-art.JPG" alt="Double Room — Balinese Artwork" />
         <div class="room-modal-caption">Double Room — Balinese Artwork</div>
       </div>
       <div class="room-modal-img" data-index="4">
-        <img src="room/bedroom-garden-view.JPG" alt="Double Room — Garden View" />
+        <img src="Paradise/room/bedroom-garden-view.JPG" alt="Double Room — Garden View" />
         <div class="room-modal-caption">Double Room — Garden View</div>
       </div>
       <div class="room-modal-img" data-index="5">
-        <img src="room/twin-room-pendant.JPG" alt="Twin Room — Rattan Lighting" />
+        <img src="Paradise/room/twin-room-pendant.JPG" alt="Twin Room — Rattan Lighting" />
         <div class="room-modal-caption">Twin Room — Rattan Pendant Lights</div>
       </div>
       <div class="room-modal-img" data-index="6">
-        <img src="room/twin-room-warm.JPG" alt="Twin Room — Garden Views" />
+        <img src="Paradise/room/twin-room-warm.JPG" alt="Twin Room — Garden Views" />
         <div class="room-modal-caption">Twin Room — Garden Views</div>
       </div>
       <div class="room-modal-img" data-index="7">
-        <img src="room/vanity-wardrobe.JPG" alt="Room Amenities &amp; Wardrobe" />
+        <img src="Paradise/room/vanity-wardrobe.JPG" alt="Room Amenities &amp; Wardrobe" />
         <div class="room-modal-caption">Room Amenities &amp; Wardrobe</div>
       </div>
       <div class="room-modal-img" data-index="8">
-        <img src="room/bathroom-vanity-2.JPG" alt="Bathroom Vanity" />
+        <img src="Paradise/room/bathroom-vanity-2.JPG" alt="Bathroom Vanity" />
         <div class="room-modal-caption">Bathroom Vanity</div>
       </div>
       <div class="room-modal-img" data-index="9">
-        <img src="room/bathroom-shower.JPG" alt="Bathroom — Wet Room Shower" />
+        <img src="Paradise/room/bathroom-shower.JPG" alt="Bathroom — Wet Room Shower" />
         <div class="room-modal-caption">Bathroom — Wet Room Shower</div>
       </div>
       <div class="room-modal-img" data-index="10">
-        <img src="room/amenities.JPG" alt="Sensatia Botanical Toiletries" />
+        <img src="Paradise/room/amenities.JPG" alt="Sensatia Botanical Toiletries" />
         <div class="room-modal-caption">Sensatia Botanical Toiletries</div>
       </div>
 
@@ -1608,17 +1509,17 @@
 
     <!-- Thumbnails -->
     <div class="room-modal-thumbs" id="roomThumbs">
-      <div class="room-thumb active" data-index="0" onclick="roomGoTo(0)"><img src="intro-bg1.jpg" alt="" /></div>
-      <div class="room-thumb" data-index="1" onclick="roomGoTo(1)"><img src="intro-bg2.jpg" alt="" /></div>
-      <div class="room-thumb" data-index="2" onclick="roomGoTo(2)"><img src="room/double-room-overview.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="3" onclick="roomGoTo(3)"><img src="room/bedroom-art.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="4" onclick="roomGoTo(4)"><img src="room/bedroom-garden-view.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="5" onclick="roomGoTo(5)"><img src="room/twin-room-pendant.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="6" onclick="roomGoTo(6)"><img src="room/twin-room-warm.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="7" onclick="roomGoTo(7)"><img src="room/vanity-wardrobe.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="8" onclick="roomGoTo(8)"><img src="room/bathroom-vanity-2.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="9" onclick="roomGoTo(9)"><img src="room/bathroom-shower.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="10" onclick="roomGoTo(10)"><img src="room/amenities.JPG" alt="" /></div>
+      <div class="room-thumb active" data-index="0" onclick="roomGoTo(0)"><img src="Paradise/intro-bg1.jpg" alt="" /></div>
+      <div class="room-thumb" data-index="1" onclick="roomGoTo(1)"><img src="Paradise/intro-bg2.jpg" alt="" /></div>
+      <div class="room-thumb" data-index="2" onclick="roomGoTo(2)"><img src="Paradise/room/double-room-overview.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="3" onclick="roomGoTo(3)"><img src="Paradise/room/bedroom-art.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="4" onclick="roomGoTo(4)"><img src="Paradise/room/bedroom-garden-view.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="5" onclick="roomGoTo(5)"><img src="Paradise/room/twin-room-pendant.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="6" onclick="roomGoTo(6)"><img src="Paradise/room/twin-room-warm.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="7" onclick="roomGoTo(7)"><img src="Paradise/room/vanity-wardrobe.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="8" onclick="roomGoTo(8)"><img src="Paradise/room/bathroom-vanity-2.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="9" onclick="roomGoTo(9)"><img src="Paradise/room/bathroom-shower.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="10" onclick="roomGoTo(10)"><img src="Paradise/room/amenities.JPG" alt="" /></div>
     </div>
   </div>
 
@@ -1997,35 +1898,6 @@
       }
     };
 
-    /* ── Quote Form → WhatsApp ── */
-    window.submitQuote = function(e) {
-      e.preventDefault();
-      var f = document.getElementById('quoteForm');
-      var name     = f.name.value.trim();
-      var contact  = f.contact.value.trim();
-      var dateRaw  = f.date.value;       // yyyy-mm-dd
-      var interest = f.interest.value;
-      var notes    = f.notes.value.trim();
-      if (!name || !contact || !dateRaw || !interest) { f.reportValidity(); return; }
-
-      // Format date dd/mm/yyyy
-      var d = dateRaw.split('-');
-      var date = d.length === 3 ? (d[2] + '/' + d[1] + '/' + d[0]) : dateRaw;
-
-      var lines = [
-        'Hi Paradise Dive Tulamben! I would like a quote 🤿',
-        '',
-        'Name: ' + name,
-        'Contact: ' + contact,
-        'Travel date: ' + date,
-        'Interest: ' + interest
-      ];
-      if (notes) lines.push('Notes: ' + notes);
-
-      var url = 'https://wa.me/60128001317?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener');
-    };
-
     /* ── Room Tour ── */
     (function() {
       const TOTAL = 11;
@@ -2107,6 +1979,6 @@
     })();
   </script>
 
-  <script src="translations.js"></script>
+  <script src="Paradise/translations.js"></script>
 </body>
 </html>
