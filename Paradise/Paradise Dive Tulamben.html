@@ -628,6 +628,71 @@
     .btn-ghost { display: inline-block; padding: 17px 46px; margin-left: 14px; border: 1px solid rgba(255,255,255,0.22); color: var(--white); font-family: var(--ui); font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; text-decoration: none; transition: border-color 0.3s, color 0.3s; }
     .btn-ghost:hover { border-color: var(--sand); color: var(--sand); }
 
+    /* ── Quote Form ── */
+    .quote-form-wrap {
+      max-width: 620px; margin: 56px auto 0; text-align: left;
+      background: rgba(8,131,149,0.06);
+      border: 1px solid rgba(0,200,232,0.14);
+      backdrop-filter: blur(10px);
+      padding: 44px 44px 40px;
+      position: relative;
+    }
+    .quote-form-title {
+      font-family: var(--ui); font-size: 0.6rem; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--sand); margin-bottom: 8px; text-align: center;
+    }
+    .quote-form-sub {
+      font-family: var(--display); font-size: 1.5rem; font-weight: 600;
+      color: var(--white); margin-bottom: 30px; text-align: center; letter-spacing: 0.5px;
+    }
+    .qf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+    .qf-field { display: flex; flex-direction: column; }
+    .qf-field.full { grid-column: 1 / -1; }
+    .qf-label {
+      font-family: var(--ui); font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase;
+      color: rgba(232,244,248,0.62); margin-bottom: 8px;
+    }
+    .qf-label .req { color: var(--accent); margin-left: 3px; }
+    .qf-input, .qf-select, .qf-textarea {
+      font-family: var(--ui); font-size: 0.9rem; color: var(--white);
+      background: rgba(4,17,30,0.5);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 12px 14px; border-radius: 2px;
+      transition: border-color 0.25s, background 0.25s;
+      width: 100%;
+    }
+    .qf-input::placeholder, .qf-textarea::placeholder { color: rgba(232,244,248,0.3); }
+    .qf-input:focus, .qf-select:focus, .qf-textarea:focus {
+      outline: none; border-color: var(--accent); background: rgba(4,17,30,0.8);
+    }
+    .qf-input:invalid:not(:placeholder-shown) { border-color: rgba(220,90,90,0.5); }
+    .qf-select { cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2300c8e8' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+    }
+    .qf-select option { background: var(--deep); color: var(--white); }
+    .qf-textarea { resize: vertical; min-height: 88px; line-height: 1.6; }
+    .qf-input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(1) saturate(4) hue-rotate(150deg); cursor: pointer; }
+    .qf-submit {
+      grid-column: 1 / -1; margin-top: 6px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 16px 32px; background: var(--accent); color: var(--navy);
+      font-family: var(--ui); font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700;
+      border: none; cursor: pointer; transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      width: 100%;
+    }
+    .qf-submit:hover { background: var(--white); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,200,232,0.25); }
+    .qf-submit svg { width: 17px; height: 17px; }
+    .qf-privacy {
+      grid-column: 1 / -1; margin-top: 14px;
+      font-family: var(--ui); font-size: 0.66rem; line-height: 1.6;
+      color: rgba(232,244,248,0.36); text-align: center;
+    }
+    @media (max-width: 640px) {
+      .quote-form-wrap { padding: 32px 22px 28px; }
+      .qf-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── FAQ ── */
     #faq { background: var(--deep); padding: 96px 60px; }
     .faq-inner { max-width: 860px; margin: 0 auto; }
@@ -1254,6 +1319,50 @@
     <p class="cta-sub">Spots fill fast — especially at dawn. Message us on WhatsApp and get confirmed in minutes. Your underwater adventure starts now.</p>
     <a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I'd%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener" class="btn-primary">Book Now — Instant Confirmation</a>
     <a href="#courses" class="btn-ghost">See All Prices</a>
+
+    <!-- ── Quote Request Form ── -->
+    <form class="quote-form-wrap" id="quoteForm" onsubmit="submitQuote(event)">
+      <p class="quote-form-title qf-eyebrow">Plan Your Trip</p>
+      <p class="quote-form-sub qf-heading">Request a Personal Quote</p>
+      <div class="qf-grid">
+        <div class="qf-field">
+          <label class="qf-label" for="qf-name"><span class="qf-l-name">Your Name</span><span class="req">*</span></label>
+          <input class="qf-input" type="text" id="qf-name" name="name" placeholder="Full Name" required />
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-contact"><span class="qf-l-contact">Contact</span><span class="req">*</span></label>
+          <input class="qf-input" type="text" id="qf-contact" name="contact" placeholder="WhatsApp / WeChat / Email" required />
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-date"><span class="qf-l-date">Planned Travel Date</span><span class="req">*</span></label>
+          <input class="qf-input" type="date" id="qf-date" name="date" required />
+        </div>
+        <div class="qf-field">
+          <label class="qf-label" for="qf-interest"><span class="qf-l-interest">Interest</span><span class="req">*</span></label>
+          <select class="qf-select" id="qf-interest" name="interest" required>
+            <option value="" disabled selected class="qf-opt-default">Select…</option>
+            <option value="Intro Dive" class="qf-opt-intro">Intro Dive (no certification)</option>
+            <option value="Guided Dive" class="qf-opt-guided">Guided Dive (certified divers)</option>
+            <option value="Open Water Course" class="qf-opt-owd">PADI Open Water Course</option>
+            <option value="Advanced Open Water" class="qf-opt-aowd">PADI Advanced Open Water</option>
+            <option value="Rescue Diver" class="qf-opt-rescue">PADI Rescue Diver</option>
+            <option value="Nitrox (EANx)" class="qf-opt-nitrox">Nitrox (EANx) Course</option>
+            <option value="Muck Diving" class="qf-opt-muck">Muck Diving</option>
+            <option value="Room + Diving Package" class="qf-opt-pkg">Room + Diving Package</option>
+            <option value="Not sure yet" class="qf-opt-unsure">Not sure yet — need advice</option>
+          </select>
+        </div>
+        <div class="qf-field full">
+          <label class="qf-label" for="qf-notes"><span class="qf-l-notes">Additional Notes</span> <span style="color:rgba(232,244,248,0.3);text-transform:none;letter-spacing:0;" class="qf-l-notes-hint">(group size, special requests, etc.)</span></label>
+          <textarea class="qf-textarea" id="qf-notes" name="notes" placeholder="Tell us more about your plans..."></textarea>
+        </div>
+        <button class="qf-submit" type="submit">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span class="qf-submit-text">Get Quote · Connect via WhatsApp</span>
+        </button>
+        <p class="qf-privacy">Your information is kept confidential and used only for travel consultation. We do not share it with third parties.</p>
+      </div>
+    </form>
   </section>
 
   <!-- ── FAQ ── -->
@@ -1399,7 +1508,7 @@
       <div>
         <div class="footer-contact-label">Email</div>
         <div class="footer-contact-value">
-          <a href="/cdn-cgi/l/email-protection#bdcddccfdcd9d4ced8d9d4cbd8c9c8d1dcd0dfd8d3fddad0dcd4d193ded2d0"><span class="__cf_email__" data-cfemail="90e0f1e2f1f4f9e3f5f4f9e6f5e4e5fcf1fdf2f5fed0f7fdf1f9fcbef3fffd">[email&#160;protected]</span></a><br>
+          <a href="/cdn-cgi/l/email-protection#3c4c5d4e5d58554f5958554a594849505d515e59527c5b515d5550125f5351"><span class="__cf_email__" data-cfemail="a8d8c9dac9ccc1dbcdccc1decddcddc4c9c5cacdc6e8cfc5c9c1c486cbc7c5">[email&#160;protected]</span></a><br>
           We reply within 24 hours
         </div>
       </div>
@@ -1886,6 +1995,35 @@
         btn.classList.add('open');
         answer.classList.add('open');
       }
+    };
+
+    /* ── Quote Form → WhatsApp ── */
+    window.submitQuote = function(e) {
+      e.preventDefault();
+      var f = document.getElementById('quoteForm');
+      var name     = f.name.value.trim();
+      var contact  = f.contact.value.trim();
+      var dateRaw  = f.date.value;       // yyyy-mm-dd
+      var interest = f.interest.value;
+      var notes    = f.notes.value.trim();
+      if (!name || !contact || !dateRaw || !interest) { f.reportValidity(); return; }
+
+      // Format date dd/mm/yyyy
+      var d = dateRaw.split('-');
+      var date = d.length === 3 ? (d[2] + '/' + d[1] + '/' + d[0]) : dateRaw;
+
+      var lines = [
+        'Hi Paradise Dive Tulamben! I would like a quote 🤿',
+        '',
+        'Name: ' + name,
+        'Contact: ' + contact,
+        'Travel date: ' + date,
+        'Interest: ' + interest
+      ];
+      if (notes) lines.push('Notes: ' + notes);
+
+      var url = 'https://wa.me/60128001317?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
     };
 
     /* ── Room Tour ── */
