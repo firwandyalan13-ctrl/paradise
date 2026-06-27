@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai","https://d59440fe-771c-42da-bf5b-7a51bb3c9cc3.claudeusercontent.com"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
 </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="Nj7ctJkFp60CqbN8mW1czzlzFyq3Lsjarj_M2I1hdx8" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2G09F7820Y"></script>
@@ -106,7 +105,7 @@
           "longitude": 115.593625
         },
         "openingHours": "Mo-Su 09:00-18:00",
-        "priceRange": "Rp 450,000 – Rp 5,600,000",
+        "priceRange": "Rp 550,000 – Rp 5,600,000",
         "currenciesAccepted": "IDR, USD",
         "paymentAccepted": "Credit Card, Wise, Bank Transfer, Cash",
         "image": "https://paradisedivetulamben.com/hero.jpg",
@@ -124,7 +123,7 @@
           "itemListElement": [
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intro Dive", "description": "No certification needed. Dive the USAT Liberty wreck with a private divemaster." }, "price": "600000", "priceCurrency": "IDR" },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PADI Open Water Diver Course", "description": "4-day PADI certification course at the Liberty wreck and Coral Garden." }, "price": "4600000", "priceCurrency": "IDR" },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Guided Dive", "description": "Shore dives with a certified divemaster. Max 4 divers per guide." }, "price": "450000", "priceCurrency": "IDR" }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Guided Dive", "description": "Shore dives with a certified divemaster. Max 4 divers per guide." }, "price": "550000", "priceCurrency": "IDR" }
           ]
         }
       },
@@ -423,9 +422,9 @@
     .intro-slide { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity 1.5s ease-in-out; opacity: 0; }
     .intro-slide.active { opacity: 1; }
     .intro-slide:nth-child(1) { background-image: url('intro-bg1.jpg'); }
-    .intro-slide:nth-child(2) { background-image: url('3285.JPG'); }
+    .intro-slide:nth-child(2) { background-image: url('paradise/3285.JPG'); }
     .intro-slide:nth-child(3) { background-image: url('intro-bg2.jpg'); }
-    .intro-slide:nth-child(4) { background-image: url('3280.JPG'); }
+    .intro-slide:nth-child(4) { background-image: url('paradise/3280.JPG'); }
     #intro::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(4,17,30,0.72) 0%, rgba(5,28,44,0.80) 100%); }
     #intro > *:not(.intro-slide) { position: relative; z-index: 2; }
     #intro .text-block { flex: 1; min-width: 300px; }
@@ -928,9 +927,10 @@
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Fun Dive</a></li>
+      <li><a href="#tips">Courses</a></li>
       <li><a href="#sites">Dive Sites</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#courses">Courses</a></li>
       <li><a href="#practical">Plan Your Trip</a></li>
     </ul>
 
@@ -983,6 +983,85 @@
     <div class="trust-sep"></div>
     <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">Instant WhatsApp Booking</span></div>
   </div>
+
+  <!-- ── Pricing ── -->
+  <section id="courses">
+    <div class="courses-header">
+      <p class="section-title">Get In The Water</p>
+      <h2 class="section-heading">Your First Breath<br>Underwater Awaits</h2>
+      <div class="divider"></div>
+      <p class="section-body">No experience? No problem. All equipment included. Our expert guides have thousands of dives on this exact reef.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card featured">
+        <div class="pricing-hot">Hot</div>
+        <div class="pricing-category">Try it today — no cert needed</div>
+        <div class="pricing-title">Intro Dive</div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-row"><span class="pricing-name">One dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>600.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Two dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.000.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Three dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.400.000</span></div>
+        <button class="btn-learn-more" style="margin-top:20px;" onclick="document.getElementById('intro-dive-modal').classList.add('open')">Learn More →</button>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-category">Specialty Experience</div>
+        <div class="pricing-title">Muck Diving</div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-row"><span class="pricing-name">One Muck Dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>650.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Two Muck Dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.250.000</span></div>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-category">Certified divers</div>
+        <div class="pricing-title">Guided Dive</div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-row"><span class="pricing-name">One dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>550.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Two dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.000.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Three dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.350.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Night dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>650.000</span></div>
+        <button class="btn-learn-more" style="margin-top:20px;" onclick="document.getElementById('guided-dive-modal').classList.add('open')">Learn More →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Certification Courses ── -->
+  <section id="tips">
+    <div class="tips-header">
+      <p class="section-title">Certification</p>
+      <h2 class="section-heading">Learn to Dive<br>in Paradise</h2>
+      <div class="divider"></div>
+      <p class="section-body" style="max-width:620px;margin-top:16px;">All courses taught by PADI-certified instructors. Small groups, personalised attention, world-class dive sites as your classroom.</p>
+    </div>
+    <div class="tips-grid" style="grid-template-columns: repeat(4,1fr);">
+      <div class="tip-card">
+        <div class="tip-tag">Beginner · No Experience Needed</div>
+        <div class="tip-title">Open Water Diver</div>
+        <div class="tip-desc">The world's most popular scuba certification. 3–4 days of theory, pool sessions &amp; 4 open-water dives on the Liberty Wreck. Certified for life.</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 4.600.000</div>
+        <button class="btn-learn-more" onclick="document.getElementById('owd-modal').classList.add('open')">Learn More →</button>
+      </div>
+      <div class="tip-card">
+        <div class="tip-tag">Intermediate · OWD Required</div>
+        <div class="tip-title">Advanced Open Water</div>
+        <div class="tip-desc">Push deeper (30 m), master buoyancy, navigate currents. 5 specialty dives including deep &amp; underwater navigation at Tulamben's best sites.</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 4.600.000</div>
+        <button class="btn-learn-more" onclick="document.getElementById('aowd-modal').classList.add('open')">Learn More →</button>
+      </div>
+      <div class="tip-card">
+        <div class="tip-tag">Specialty · AOWD Required</div>
+        <div class="tip-title">Rescue Diver</div>
+        <div class="tip-desc">The course that changes how you dive forever. Learn to prevent and manage dive emergencies. Highly recommended before going professional.</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 5.600.000</div>
+        <button class="btn-learn-more" onclick="document.getElementById('rescue-modal').classList.add('open')">Learn More →</button>
+      </div>
+      <div class="tip-card">
+        <div class="tip-tag">Specialty · OWD Required</div>
+        <div class="tip-title">Nitrox (EANx)</div>
+        <div class="tip-desc">Dive longer, surface more refreshed. Enriched Air certification lets you extend your bottom time and reduce nitrogen loading on multi-dive days.</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 3.000.000</div>
+        <button class="btn-learn-more" onclick="document.getElementById('nitrox-modal').classList.add('open')">Learn More →</button>
+      </div>
+    </div>
+  </section>
 
   <!-- ── Intro ── -->
   <section id="intro">
@@ -1182,11 +1261,11 @@
       <p class="gallery-hint">Drag to explore — professional gear, warm spaces, everything included</p>
     </div>
     <div class="gallery-track" id="galleryTrack">
-      <div class="gallery-item"><img src="DC1.jpg" alt="Dive Centre Equipment Room — Wetsuits &amp; BCDs" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">01</div></div>
-      <div class="gallery-item"><img src="DC2.jpg" alt="Dive Centre — BCDs, Fins &amp; Safety Equipment" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">02</div></div>
-      <div class="gallery-item"><img src="DC3.jpg" alt="Dive Centre — Freediving Fins &amp; Mask Storage" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">03</div></div>
-      <div class="gallery-item"><img src="DC4.jpg" alt="Paradise Dive — Dining Area &amp; Briefing Space" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">04</div></div>
-      <div class="gallery-item"><img src="DC5.jpg" alt="Paradise Dive — Classroom &amp; Briefing Room" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">05</div></div>
+      <div class="gallery-item"><img src="dc/DC1.jpg" alt="Dive Centre Equipment Room — Wetsuits &amp; BCDs" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">01</div></div>
+      <div class="gallery-item"><img src="dc/DC2.jpg" alt="Dive Centre — BCDs, Fins &amp; Safety Equipment" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">02</div></div>
+      <div class="gallery-item"><img src="dc/DC3.jpg" alt="Dive Centre — Freediving Fins &amp; Mask Storage" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">03</div></div>
+      <div class="gallery-item"><img src="dc/DC4.jpg" alt="Paradise Dive — Dining Area &amp; Briefing Space" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">04</div></div>
+      <div class="gallery-item"><img src="dc/DC5.jpg" alt="Paradise Dive — Classroom &amp; Briefing Room" loading="lazy" /><div class="gallery-item-overlay"></div><div class="gallery-num">05</div></div>
     </div>
   </section>
 
@@ -1240,85 +1319,6 @@
           <div class="prac-desc">OWD holders can dive the wreck's shallow zone and Coral Garden. AOW unlocks the Drop Off deep wall. No cert? Try a Discover Scuba course.</div>
           <div class="prac-value">OWD to start</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Certification Courses ── -->
-  <section id="tips">
-    <div class="tips-header">
-      <p class="section-title">Certification</p>
-      <h2 class="section-heading">Learn to Dive<br>in Paradise</h2>
-      <div class="divider"></div>
-      <p class="section-body" style="max-width:620px;margin-top:16px;">All courses taught by PADI-certified instructors. Small groups, personalised attention, world-class dive sites as your classroom.</p>
-    </div>
-    <div class="tips-grid" style="grid-template-columns: repeat(4,1fr);">
-      <div class="tip-card">
-        <div class="tip-tag">Beginner · No Experience Needed</div>
-        <div class="tip-title">Open Water Diver</div>
-        <div class="tip-desc">The world's most popular scuba certification. 3–4 days of theory, pool sessions &amp; 4 open-water dives on the Liberty Wreck. Certified for life.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 4.600.000</div>
-        <button class="btn-learn-more" onclick="document.getElementById('owd-modal').classList.add('open')">Learn More →</button>
-      </div>
-      <div class="tip-card">
-        <div class="tip-tag">Intermediate · OWD Required</div>
-        <div class="tip-title">Advanced Open Water</div>
-        <div class="tip-desc">Push deeper (30 m), master buoyancy, navigate currents. 5 specialty dives including deep &amp; underwater navigation at Tulamben's best sites.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 4.600.000</div>
-        <button class="btn-learn-more" onclick="document.getElementById('aowd-modal').classList.add('open')">Learn More →</button>
-      </div>
-      <div class="tip-card">
-        <div class="tip-tag">Specialty · AOWD Required</div>
-        <div class="tip-title">Rescue Diver</div>
-        <div class="tip-desc">The course that changes how you dive forever. Learn to prevent and manage dive emergencies. Highly recommended before going professional.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 5.600.000</div>
-        <button class="btn-learn-more" onclick="document.getElementById('rescue-modal').classList.add('open')">Learn More →</button>
-      </div>
-      <div class="tip-card">
-        <div class="tip-tag">Specialty · OWD Required</div>
-        <div class="tip-title">Nitrox (EANx)</div>
-        <div class="tip-desc">Dive longer, surface more refreshed. Enriched Air certification lets you extend your bottom time and reduce nitrogen loading on multi-dive days.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 3.000.000</div>
-        <button class="btn-learn-more" onclick="document.getElementById('nitrox-modal').classList.add('open')">Learn More →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Pricing ── -->
-  <section id="courses">
-    <div class="courses-header">
-      <p class="section-title">Get In The Water</p>
-      <h2 class="section-heading">Your First Breath<br>Underwater Awaits</h2>
-      <div class="divider"></div>
-      <p class="section-body">No experience? No problem. All equipment included. Our expert guides have thousands of dives on this exact reef.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="pricing-card featured">
-        <div class="pricing-hot">Hot</div>
-        <div class="pricing-category">Try it today — no cert needed</div>
-        <div class="pricing-title">Intro Dive</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-row"><span class="pricing-name">One dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>600.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Two dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.000.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Three dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.400.000</span></div>
-        <button class="btn-learn-more" style="margin-top:20px;" onclick="document.getElementById('intro-dive-modal').classList.add('open')">Learn More →</button>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-category">Specialty Experience</div>
-        <div class="pricing-title">Muck Diving</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-row"><span class="pricing-name">One Muck Dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>650.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Two Muck Dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.250.000</span></div>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-category">Certified divers</div>
-        <div class="pricing-title">Guided Dive</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-row"><span class="pricing-name">One dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>450.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Two dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>850.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Three dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.200.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Night dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>550.000</span></div>
-        <button class="btn-learn-more" style="margin-top:20px;" onclick="document.getElementById('guided-dive-modal').classList.add('open')">Learn More →</button>
       </div>
     </div>
   </section>
@@ -1518,7 +1518,7 @@
       <div>
         <div class="footer-contact-label">Email</div>
         <div class="footer-contact-value">
-          <a href="/cdn-cgi/l/email-protection#0b7b6a796a6f62786e6f627d6e7f7e676a66696e654b6c666a626725686466"><span class="__cf_email__" data-cfemail="5525342734313c2630313c2330212039343837303b153238343c397b363a38">[email&#160;protected]</span></a><br>
+          <a href="mailto:paradisedivetulamben@gmail.com">paradisedivetulamben@gmail.com</a><br>
           We reply within 24 hours
         </div>
       </div>
@@ -1576,39 +1576,39 @@
         <div class="room-modal-caption">Aerial — Beachfront Property</div>
       </div>
       <div class="room-modal-img" data-index="2">
-        <img src="double-room-overview.JPG" alt="Double Room — Overview" />
+        <img src="room/double-room-overview.JPG" alt="Double Room — Overview" />
         <div class="room-modal-caption">Double Room — Overview</div>
       </div>
       <div class="room-modal-img" data-index="3">
-        <img src="bedroom-art.JPG" alt="Double Room — Balinese Artwork" />
+        <img src="room/bedroom-art.JPG" alt="Double Room — Balinese Artwork" />
         <div class="room-modal-caption">Double Room — Balinese Artwork</div>
       </div>
       <div class="room-modal-img" data-index="4">
-        <img src="bedroom-garden-view.JPG" alt="Double Room — Garden View" />
+        <img src="room/bedroom-garden-view.JPG" alt="Double Room — Garden View" />
         <div class="room-modal-caption">Double Room — Garden View</div>
       </div>
       <div class="room-modal-img" data-index="5">
-        <img src="twin-room-pendant.JPG" alt="Twin Room — Rattan Lighting" />
+        <img src="room/twin-room-pendant.JPG" alt="Twin Room — Rattan Lighting" />
         <div class="room-modal-caption">Twin Room — Rattan Pendant Lights</div>
       </div>
       <div class="room-modal-img" data-index="6">
-        <img src="twin-room-warm.JPG" alt="Twin Room — Garden Views" />
+        <img src="room/twin-room-warm.JPG" alt="Twin Room — Garden Views" />
         <div class="room-modal-caption">Twin Room — Garden Views</div>
       </div>
       <div class="room-modal-img" data-index="7">
-        <img src="vanity-wardrobe.JPG" alt="Room Amenities &amp; Wardrobe" />
+        <img src="room/vanity-wardrobe.JPG" alt="Room Amenities &amp; Wardrobe" />
         <div class="room-modal-caption">Room Amenities &amp; Wardrobe</div>
       </div>
       <div class="room-modal-img" data-index="8">
-        <img src="bathroom-vanity-2.JPG" alt="Bathroom Vanity" />
+        <img src="room/bathroom-vanity-2.JPG" alt="Bathroom Vanity" />
         <div class="room-modal-caption">Bathroom Vanity</div>
       </div>
       <div class="room-modal-img" data-index="9">
-        <img src="bathroom-shower.JPG" alt="Bathroom — Wet Room Shower" />
+        <img src="room/bathroom-shower.JPG" alt="Bathroom — Wet Room Shower" />
         <div class="room-modal-caption">Bathroom — Wet Room Shower</div>
       </div>
       <div class="room-modal-img" data-index="10">
-        <img src="amenities.JPG" alt="Sensatia Botanical Toiletries" />
+        <img src="room/amenities.JPG" alt="Sensatia Botanical Toiletries" />
         <div class="room-modal-caption">Sensatia Botanical Toiletries</div>
       </div>
 
@@ -1620,15 +1620,15 @@
     <div class="room-modal-thumbs" id="roomThumbs">
       <div class="room-thumb active" data-index="0" onclick="roomGoTo(0)"><img src="intro-bg1.jpg" alt="" /></div>
       <div class="room-thumb" data-index="1" onclick="roomGoTo(1)"><img src="intro-bg2.jpg" alt="" /></div>
-      <div class="room-thumb" data-index="2" onclick="roomGoTo(2)"><img src="double-room-overview.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="3" onclick="roomGoTo(3)"><img src="bedroom-art.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="4" onclick="roomGoTo(4)"><img src="bedroom-garden-view.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="5" onclick="roomGoTo(5)"><img src="twin-room-pendant.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="6" onclick="roomGoTo(6)"><img src="twin-room-warm.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="7" onclick="roomGoTo(7)"><img src="vanity-wardrobe.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="8" onclick="roomGoTo(8)"><img src="bathroom-vanity-2.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="9" onclick="roomGoTo(9)"><img src="bathroom-shower.JPG" alt="" /></div>
-      <div class="room-thumb" data-index="10" onclick="roomGoTo(10)"><img src="amenities.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="2" onclick="roomGoTo(2)"><img src="room/double-room-overview.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="3" onclick="roomGoTo(3)"><img src="room/bedroom-art.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="4" onclick="roomGoTo(4)"><img src="room/bedroom-garden-view.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="5" onclick="roomGoTo(5)"><img src="room/twin-room-pendant.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="6" onclick="roomGoTo(6)"><img src="room/twin-room-warm.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="7" onclick="roomGoTo(7)"><img src="room/vanity-wardrobe.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="8" onclick="roomGoTo(8)"><img src="room/bathroom-vanity-2.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="9" onclick="roomGoTo(9)"><img src="room/bathroom-shower.JPG" alt="" /></div>
+      <div class="room-thumb" data-index="10" onclick="roomGoTo(10)"><img src="room/amenities.JPG" alt="" /></div>
     </div>
   </div>
 
@@ -1786,16 +1786,16 @@
       <button class="modal-close" onclick="document.getElementById('guided-dive-modal').classList.remove('open')">&times;</button>
       <div class="modal-tag">Certified Divers · OWD Required</div>
       <div class="modal-title">Guided Dive</div>
-      <div class="modal-price">From Rp 450.000 · Max 4 divers per guide</div>
+      <div class="modal-price">From Rp 550.000 · Max 4 divers per guide</div>
       <div class="modal-divider"></div>
       <div class="modal-section-heading">Description</div>
       <div class="modal-body">If you are a certified diver itching to explore Bali's underwater world, join us for a fun dive — or five! When and where you dive is entirely up to you. Mix it up with a sunrise or night dive to discover what mysteries await beneath the surface. We firmly believe in keeping group sizes small — we'll never exceed more than <strong>4 customers per divemaster</strong>.</div>
       <div class="modal-section-heading">Pricing</div>
       <ul class="modal-list">
-        <li>One dive — <strong>Rp 450.000</strong></li>
-        <li>Two dives — <strong>Rp 850.000</strong></li>
-        <li>Three dives — <strong>Rp 1.200.000</strong></li>
-        <li>Night dive — <strong>Rp 550.000</strong></li>
+        <li>One dive — <strong>Rp 550.000</strong></li>
+        <li>Two dives — <strong>Rp 1.000.000</strong></li>
+        <li>Three dives — <strong>Rp 1.350.000</strong></li>
+        <li>Night dive — <strong>Rp 650.000</strong></li>
       </ul>
       <div class="modal-section-heading">Requirements</div>
       <div class="modal-body">Must hold a <strong>PADI Open Water Diver Certification</strong> (or equivalent), be at least <strong>12 years old</strong>, have adequate swimming skills, and be in good physical health.</div>
@@ -1814,7 +1814,7 @@
   <!-- ══════════════════════════════════════════════
        SCRIPTS
   ══════════════════════════════════════════════ -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     /* ── Bubbles ── */
     (function() {
       const bc = document.getElementById('bubbles');
