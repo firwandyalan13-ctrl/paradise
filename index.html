@@ -620,8 +620,8 @@
     .pricing-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-family: var(--ui); }
     .pricing-row:last-child { border-bottom: none; }
     .pricing-name { font-size: 0.85rem; color: rgba(232,244,248,0.7); }
-    .pricing-price { font-size: 0.95rem; font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
-    .pricing-currency { font-size: 0.6rem; color: var(--accent); font-weight: 400; margin-right: 2px; }
+    .pricing-price { font-size: 1.18rem; font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
+    .pricing-currency { font-size: 0.72rem; color: var(--accent); font-weight: 400; margin-right: 3px; }
     @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
 
     /* ── CTA ── */
@@ -1039,28 +1039,28 @@
         <div class="tip-tag">Beginner · No Experience Needed</div>
         <div class="tip-title">Open Water Diver</div>
         <div class="tip-desc">The world's most popular scuba certification. 3–4 days of theory, pool sessions &amp; 4 open-water dives on the Liberty Wreck. Certified for life.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 4.600.000</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:1rem;font-weight:600;letter-spacing:1.5px;color:var(--accent);">Rp 4.600.000</div>
         <button class="btn-learn-more" onclick="document.getElementById('owd-modal').classList.add('open')">Learn More →</button>
       </div>
       <div class="tip-card">
         <div class="tip-tag">Intermediate · OWD Required</div>
         <div class="tip-title">Advanced Open Water</div>
         <div class="tip-desc">Push deeper (30 m), master buoyancy, navigate currents. 5 specialty dives including deep &amp; underwater navigation at Tulamben's best sites.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 4.600.000</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:1rem;font-weight:600;letter-spacing:1.5px;color:var(--accent);">Rp 4.600.000</div>
         <button class="btn-learn-more" onclick="document.getElementById('aowd-modal').classList.add('open')">Learn More →</button>
       </div>
       <div class="tip-card">
         <div class="tip-tag">Specialty · AOWD Required</div>
         <div class="tip-title">Rescue Diver</div>
         <div class="tip-desc">The course that changes how you dive forever. Learn to prevent and manage dive emergencies. Highly recommended before going professional.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 5.600.000</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:1rem;font-weight:600;letter-spacing:1.5px;color:var(--accent);">Rp 5.600.000</div>
         <button class="btn-learn-more" onclick="document.getElementById('rescue-modal').classList.add('open')">Learn More →</button>
       </div>
       <div class="tip-card">
         <div class="tip-tag">Specialty · OWD Required</div>
         <div class="tip-title">Nitrox (EANx)</div>
         <div class="tip-desc">Dive longer, surface more refreshed. Enriched Air certification lets you extend your bottom time and reduce nitrogen loading on multi-dive days.</div>
-        <div style="margin-top:20px;font-family:var(--ui);font-size:0.72rem;letter-spacing:2px;color:var(--accent);">Rp 3.000.000</div>
+        <div style="margin-top:20px;font-family:var(--ui);font-size:1rem;font-weight:600;letter-spacing:1.5px;color:var(--accent);">Rp 3.000.000</div>
         <button class="btn-learn-more" onclick="document.getElementById('nitrox-modal').classList.add('open')">Learn More →</button>
       </div>
     </div>
@@ -1331,7 +1331,6 @@
     <h2 class="cta-heading">Don't Just Dream It.<br><span style="color:var(--accent);font-style:italic;">Dive It.</span></h2>
     <p class="cta-sub">Spots fill fast — especially at dawn. Message us on WhatsApp and get confirmed in minutes. Your underwater adventure starts now.</p>
     <a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I'd%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener" class="btn-primary">Book Now — Instant Confirmation</a>
-    <a href="#courses" class="btn-ghost">See All Prices</a>
 
     <!-- ── Quote Request Form ── -->
     <form class="quote-form-wrap" id="quoteForm" onsubmit="submitQuote(event)">
@@ -1997,12 +1996,12 @@
 
     /* ── FAQ Toggle ── */
     window.toggleFaq = function(btn) {
-      const answer = btn.nextElementSibling;
+      const answer = btn.closest('.faq-item').querySelector('.faq-answer');
       const isOpen = btn.classList.contains('open');
       // Close all
       document.querySelectorAll('.faq-question.open').forEach(function(b) {
         b.classList.remove('open');
-        b.nextElementSibling.classList.remove('open');
+        b.closest('.faq-item').querySelector('.faq-answer').classList.remove('open');
       });
       // Open clicked (if it was closed)
       if (!isOpen) {
