@@ -10,7 +10,7 @@
 
     /* ── ENGLISH ── */
     en: {
-      'nav.home':'Home','nav.sites':'Dive Sites','nav.gallery':'Gallery','nav.courses':'Courses','nav.plan':'Plan Your Trip',
+      'nav.home':'Home','nav.fundive':'Fun Dive','nav.sites':'Dive Sites','nav.gallery':'Gallery','nav.courses':'Courses','nav.plan':'Plan Your Trip',
       'hero.eyebrow':'Official Site &nbsp;·&nbsp; Tulamben, Bali, Indonesia',
       'hero.subtitle':'Walk off the beach. Descend into legend.',
       'hero.scroll':'SCROLL',
@@ -94,7 +94,7 @@
 
     /* ── CHINESE 中文 ── */
     zh: {
-      'nav.home':'首页','nav.sites':'潜水点','nav.gallery':'相册','nav.courses':'课程','nav.plan':'行程规划',
+      'nav.home':'首页','nav.fundive':'趣味潜水','nav.sites':'潜水点','nav.gallery':'相册','nav.courses':'课程','nav.plan':'行程规划',
       'hero.eyebrow':'官方网站 &nbsp;·&nbsp; 巴厘岛图兰奔，印度尼西亚',
       'hero.subtitle':'踏上沙滩，潜入传奇。','hero.scroll':'滚动',
       'trust.padi':'PADI认证教练','trust.max4':'每位导潜最多4名','trust.photos':'免费照片和视频','trust.equipment':'全套设备包含','trust.booking':'WhatsApp即时预约',
@@ -173,7 +173,7 @@
 
     /* ── GERMAN Deutsch ── */
     de: {
-      'nav.home':'Start','nav.sites':'Tauchplätze','nav.gallery':'Galerie','nav.courses':'Kurse','nav.plan':'Reiseplanung',
+      'nav.home':'Start','nav.fundive':'Funtauchen','nav.sites':'Tauchplätze','nav.gallery':'Galerie','nav.courses':'Kurse','nav.plan':'Reiseplanung',
       'hero.eyebrow':'Offizielle Website &nbsp;·&nbsp; Tulamben, Bali, Indonesien',
       'hero.subtitle':'Vom Strand direkt ins Wasser. Tauche in die Legende.','hero.scroll':'SCROLLEN',
       'trust.padi':'PADI-zertifizierte Instruktoren','trust.max4':'Max. 4 Taucher pro Guide',
@@ -253,7 +253,7 @@
 
     /* ── RUSSIAN Русский ── */
     ru: {
-      'nav.home':'Главная','nav.sites':'Места дайвинга','nav.gallery':'Галерея','nav.courses':'Курсы','nav.plan':'Планирование',
+      'nav.home':'Главная','nav.fundive':'Фан-дайвинг','nav.sites':'Места дайвинга','nav.gallery':'Галерея','nav.courses':'Курсы','nav.plan':'Планирование',
       'hero.eyebrow':'Официальный сайт &nbsp;·&nbsp; Туламбен, Бали, Индонезия',
       'hero.subtitle':'Ступи с пляжа. Погрузись в легенду.','hero.scroll':'ЛИСТАТЬ',
       'trust.padi':'Инструкторы с сертификатом PADI','trust.max4':'Не более 4 дайверов на гида',
@@ -333,7 +333,7 @@
 
     /* ── JAPANESE 日本語 ── */
     ja: {
-      'nav.home':'ホーム','nav.sites':'ダイブサイト','nav.gallery':'ギャラリー','nav.courses':'コース','nav.plan':'旅行計画',
+      'nav.home':'ホーム','nav.fundive':'ファンダイブ','nav.sites':'ダイブサイト','nav.gallery':'ギャラリー','nav.courses':'コース','nav.plan':'旅行計画',
       'hero.eyebrow':'公式サイト &nbsp;·&nbsp; バリ島トゥランベン、インドネシア',
       'hero.subtitle':'ビーチから海へ。伝説の世界に潜ろう。','hero.scroll':'スクロール',
       'trust.padi':'PADI認定インストラクター','trust.max4':'1ガイドにつき最大4名',
@@ -413,7 +413,7 @@
 
     /* ── KOREAN 한국어 ── */
     ko: {
-      'nav.home':'홈','nav.sites':'다이브 사이트','nav.gallery':'갤러리','nav.courses':'코스','nav.plan':'여행 계획',
+      'nav.home':'홈','nav.fundive':'펀 다이브','nav.sites':'다이브 사이트','nav.gallery':'갤러리','nav.courses':'코스','nav.plan':'여행 계획',
       'hero.eyebrow':'공식 사이트 &nbsp;·&nbsp; 발리 툴람벤, 인도네시아',
       'hero.subtitle':'해변을 걷다, 전설 속으로 잠수하세요.','hero.scroll':'스크롤',
       'trust.padi':'PADI 공인 강사','trust.max4':'가이드당 최대 4명',
@@ -493,7 +493,7 @@
 
     /* ── FRENCH Français ── */
     fr: {
-      'nav.home':'Accueil','nav.sites':'Sites de plongée','nav.gallery':'Galerie','nav.courses':'Formations','nav.plan':'Préparer le voyage',
+      'nav.home':'Accueil','nav.fundive':'Plongée loisir','nav.sites':'Sites de plongée','nav.gallery':'Galerie','nav.courses':'Formations','nav.plan':'Préparer le voyage',
       'hero.eyebrow':'Site officiel &nbsp;·&nbsp; Tulamben, Bali, Indonésie',
       'hero.subtitle':'De la plage à la légende.','hero.scroll':'DÉFILER',
       'trust.padi':'Instructeurs certifiés PADI','trust.max4':'Max 4 plongeurs par guide',
@@ -579,11 +579,11 @@
   const MAP = [
     // Nav links (match nav + footer)
       ['.nav-links a[href="#home"]','nav.home'],
+      ['.nav-links a[href="#courses"]','nav.fundive'],
+      ['.nav-links a[href="#tips"]','nav.courses'],
       ['.nav-links a[href="#sites"]','nav.sites'],
       ['.nav-links a[href="#gallery"]','nav.gallery'],
-      ['.nav-links a[href="#courses"]','nav.courses'],
       ['.nav-links a[href="#practical"]','nav.plan'],
-      ['.nav-links a[href="#tips"]','nav.courses'],
 
     // Hero
     ['.hero-eyebrow','hero.eyebrow'],
