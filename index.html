@@ -123,7 +123,7 @@
           "itemListElement": [
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intro Dive", "description": "No certification needed. Dive the USAT Liberty wreck with a private divemaster." }, "price": "600000", "priceCurrency": "IDR" },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PADI Open Water Diver Course", "description": "4-day PADI certification course at the Liberty wreck and Coral Garden." }, "price": "6000000", "priceCurrency": "IDR" },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Guided Dive", "description": "Shore dives with a certified divemaster. Max 4 divers per guide." }, "price": "550000", "priceCurrency": "IDR" }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Guided Dive", "description": "Shore dives with a certified divemaster. Private guide, night dive, and jukung boat dive options." }, "price": "500000", "priceCurrency": "IDR" }
           ]
         }
       },
@@ -620,7 +620,7 @@
     .pricing-divider { width: 32px; height: 2px; background: var(--sand); margin-bottom: 28px; border-radius: 2px; opacity: 0.65; }
     .pricing-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-family: var(--ui); }
     .pricing-row:last-child { border-bottom: none; }
-    .pricing-name { font-size: 0.85rem; color: rgba(232,244,248,0.7); }
+    .pricing-name { font-size: 0.85rem; color: rgba(232,244,248,0.7); padding-right: 16px; max-width: 70%; }
     .pricing-price { font-size: 1.18rem; font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
     .pricing-currency { font-size: 0.72rem; color: var(--accent); font-weight: 400; margin-right: 3px; }
     @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
@@ -1017,11 +1017,10 @@
         <div class="pricing-category">Certified divers</div>
         <div class="pricing-title">Guided Dive</div>
         <div class="pricing-divider"></div>
-        <div class="pricing-row"><span class="pricing-name">One dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>550.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Two dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.000.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Three dives</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.350.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Five dives (Tulamben/Kubu)</span><span class="pricing-price"><span class="pricing-currency">Rp</span>2.300.000</span></div>
-        <div class="pricing-row"><span class="pricing-name">Night dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>650.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Private guide / per day</span><span class="pricing-price"><span class="pricing-currency">Rp</span>500.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">One dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>850.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Night dive</span><span class="pricing-price"><span class="pricing-currency">Rp</span>950.000</span></div>
+        <div class="pricing-row"><span class="pricing-name">Boat dive (jukung) / max 2 pax per boat</span><span class="pricing-price"><span class="pricing-currency">Rp</span>1.750.000</span></div>
         <button class="btn-learn-more" style="margin-top:20px;" onclick="document.getElementById('guided-dive-modal').classList.add('open')">Learn More →</button>
       </div>
     </div>
@@ -1789,17 +1788,16 @@
       <button class="modal-close" onclick="document.getElementById('guided-dive-modal').classList.remove('open')">&times;</button>
       <div class="modal-tag">Certified Divers · OWD Required</div>
       <div class="modal-title">Guided Dive</div>
-      <div class="modal-price">From Rp 550.000 · Max 4 divers per guide</div>
+      <div class="modal-price">From Rp 500.000 · Certified divers</div>
       <div class="modal-divider"></div>
       <div class="modal-section-heading">Description</div>
-      <div class="modal-body">If you are a certified diver itching to explore Bali's underwater world, join us for a fun dive — or five! When and where you dive is entirely up to you. Mix it up with a sunrise or night dive to discover what mysteries await beneath the surface. We firmly believe in keeping group sizes small — we'll never exceed more than <strong>4 customers per divemaster</strong>.</div>
+      <div class="modal-body">If you are a certified diver itching to explore Bali's underwater world, join us for a fun dive. When and where you dive is entirely up to you. Mix it up with a sunrise, night dive, or a boat dive by jukung to discover what mysteries await beneath the surface. We firmly believe in keeping group sizes small — we'll never exceed more than <strong>4 customers per divemaster</strong>, and jukung boat dives are limited to <strong>2 pax per boat</strong>.</div>
       <div class="modal-section-heading">Pricing</div>
       <ul class="modal-list">
-        <li>One dive — <strong>Rp 550.000</strong></li>
-        <li>Two dives — <strong>Rp 1.000.000</strong></li>
-        <li>Three dives — <strong>Rp 1.350.000</strong></li>
-        <li>Five dives (Tulamben/Kubu) — <strong>Rp 2.300.000</strong></li>
-        <li>Night dive — <strong>Rp 650.000</strong></li>
+        <li>Private guide / per day — <strong>Rp 500.000</strong></li>
+        <li>One dive — <strong>Rp 850.000</strong></li>
+        <li>Night dive — <strong>Rp 950.000</strong></li>
+        <li>Boat dive (jukung) / max 2 pax per boat — <strong>Rp 1.750.000</strong></li>
       </ul>
       <div class="modal-section-heading">Requirements</div>
       <div class="modal-body">Must hold a <strong>PADI Open Water Diver Certification</strong> (or equivalent), be at least <strong>12 years old</strong>, have adequate swimming skills, and be in good physical health.</div>
