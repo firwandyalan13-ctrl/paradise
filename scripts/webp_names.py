@@ -4,7 +4,7 @@ from __future__ import annotations
 
 # Keys: exact original filename at repo root. Values: lowercase hyphenated WebP stem.
 WEBP_STEM: dict[str, str] = {
-    "hero.jpg": "usat-liberty-wreck-tulamben-hero",
+    "hero.jpg": "tulamben-sunset-palm-trees-hero",
     "GOPR1314.jpg": "usat-liberty-wreck-coral-tulamben",
     "dropoff.jpg": "tulamben-drop-off-coral-wall",
     "coral-garden.jpg": "coral-garden-reef-fish-tulamben",
@@ -34,7 +34,7 @@ WEBP_STEM: dict[str, str] = {
 
 # Old committed WebP filename -> new filename (for renames & HTML replace).
 OLD_TO_NEW_WEBP: dict[str, str] = {
-    "hero.webp": "usat-liberty-wreck-tulamben-hero.webp",
+    "hero.webp": "tulamben-sunset-palm-trees-hero.webp",
     "GOPR1314.webp": "usat-liberty-wreck-coral-tulamben.webp",
     "dropoff.webp": "tulamben-drop-off-coral-wall.webp",
     "coral-garden.webp": "coral-garden-reef-fish-tulamben.webp",
