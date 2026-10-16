@@ -7,7 +7,10 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
+from designer_webp_sources import DESIGNER_ARCHIVE_TO_SRC
 from webp_names import WEBP_STEM, webp_for_src
+
+DESIGNER_SRCS = frozenset(DESIGNER_ARCHIVE_TO_SRC.values())
 
 ROOT = Path(__file__).resolve().parent.parent
 QUALITY = 78
@@ -94,6 +97,9 @@ def main() -> None:
             if key in seen:
                 continue
             seen.add(key)
+            if name in DESIGNER_SRCS and max_w != 400:
+                print(f"SKIP designer source {name} (max_w={max_w})")
+                continue
             orig, new, w, h = convert(name, max_w)
             out = out_name(name, max_w)
             rows.append((name, max_w, orig, new, out))
