@@ -7,6 +7,8 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
+from webp_names import WEBP_STEM, webp_for_src
+
 ROOT = Path(__file__).resolve().parent.parent
 QUALITY = 78
 
@@ -58,11 +60,9 @@ JOBS: dict[int, list[str]] = {
 
 
 def out_name(src: str, max_w: int) -> str:
-    p = Path(src)
-    stem = p.stem
-    if max_w == 400:
-        return f"{stem}-thumb.webp"
-    return f"{stem}.webp"
+    if src not in WEBP_STEM:
+        raise KeyError(f"No WebP name mapping for {src}")
+    return webp_for_src(src, thumb=(max_w == 400))
 
 
 def convert(src_name: str, max_w: int) -> tuple[int, int, int]:

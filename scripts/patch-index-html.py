@@ -5,55 +5,57 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from webp_names import webp_for_src
+
 ROOT = Path(__file__).resolve().parent.parent
 INDEX = ROOT / "index.html"
 
-# src -> (webp, width, height) for main images; thumbs use *-thumb.webp
+# src -> (webp, width, height) for main images
 IMG_DIMS: dict[str, tuple[str, int, int]] = {
-    "GOPR1314.jpg": ("GOPR1314.webp", 1200, 1600),
-    "dropoff.jpg": ("dropoff.webp", 1200, 800),
-    "coral-garden.jpg": ("coral-garden.webp", 1200, 1050),
-    "DC1.jpg": ("DC1.webp", 1200, 675),
-    "DC2.jpg": ("DC2.webp", 1200, 900),
-    "DC3.jpg": ("DC3.webp", 1200, 831),
-    "DC4.jpg": ("DC4.webp", 1200, 900),
-    "DC5.jpg": ("DC5.webp", 1200, 900),
-    "intro-bg1.jpg": ("intro-bg1.webp", 1280, 1707),
-    "intro-bg2.jpg": ("intro-bg2.webp", 1080, 1440),
-    "double-room-overview.JPG": ("double-room-overview.webp", 1200, 1600),
-    "bedroom-art.JPG": ("bedroom-art.webp", 1200, 2135),
-    "bedroom-garden-view.JPG": ("bedroom-garden-view.webp", 1200, 2134),
-    "twin-room-pendant.JPG": ("twin-room-pendant.webp", 1200, 900),
-    "twin-room-warm.JPG": ("twin-room-warm.webp", 1200, 2133),
-    "vanity-wardrobe.JPG": ("vanity-wardrobe.webp", 1200, 2135),
-    "bathroom-vanity-2.JPG": ("bathroom-vanity-2.webp", 1200, 2135),
-    "bathroom-shower.JPG": ("bathroom-shower.webp", 1200, 1600),
-    "amenities.JPG": ("amenities.webp", 1200, 2135),
+    "GOPR1314.jpg": (webp_for_src("GOPR1314.jpg"), 1200, 1600),
+    "dropoff.jpg": (webp_for_src("dropoff.jpg"), 1200, 800),
+    "coral-garden.jpg": (webp_for_src("coral-garden.jpg"), 1200, 1050),
+    "DC1.jpg": (webp_for_src("DC1.jpg"), 1200, 675),
+    "DC2.jpg": (webp_for_src("DC2.jpg"), 1200, 900),
+    "DC3.jpg": (webp_for_src("DC3.jpg"), 1200, 831),
+    "DC4.jpg": (webp_for_src("DC4.jpg"), 1200, 900),
+    "DC5.jpg": (webp_for_src("DC5.jpg"), 1200, 900),
+    "intro-bg1.jpg": (webp_for_src("intro-bg1.jpg"), 1280, 1707),
+    "intro-bg2.jpg": (webp_for_src("intro-bg2.jpg"), 1080, 1440),
+    "double-room-overview.JPG": (webp_for_src("double-room-overview.JPG"), 1200, 1600),
+    "bedroom-art.JPG": (webp_for_src("bedroom-art.JPG"), 1200, 2135),
+    "bedroom-garden-view.JPG": (webp_for_src("bedroom-garden-view.JPG"), 1200, 2134),
+    "twin-room-pendant.JPG": (webp_for_src("twin-room-pendant.JPG"), 1200, 900),
+    "twin-room-warm.JPG": (webp_for_src("twin-room-warm.JPG"), 1200, 2133),
+    "vanity-wardrobe.JPG": (webp_for_src("vanity-wardrobe.JPG"), 1200, 2135),
+    "bathroom-vanity-2.JPG": (webp_for_src("bathroom-vanity-2.JPG"), 1200, 2135),
+    "bathroom-shower.JPG": (webp_for_src("bathroom-shower.JPG"), 1200, 1600),
+    "amenities.JPG": (webp_for_src("amenities.JPG"), 1200, 2135),
 }
 
 THUMB_DIMS: dict[str, tuple[str, int, int]] = {
-    "intro-bg1.jpg": ("intro-bg1-thumb.webp", 400, 533),
-    "intro-bg2.jpg": ("intro-bg2-thumb.webp", 400, 533),
-    "double-room-overview.JPG": ("double-room-overview-thumb.webp", 400, 533),
-    "bedroom-art.JPG": ("bedroom-art-thumb.webp", 400, 712),
-    "bedroom-garden-view.JPG": ("bedroom-garden-view-thumb.webp", 400, 711),
-    "twin-room-pendant.JPG": ("twin-room-pendant-thumb.webp", 400, 300),
-    "twin-room-warm.JPG": ("twin-room-warm-thumb.webp", 400, 711),
-    "vanity-wardrobe.JPG": ("vanity-wardrobe-thumb.webp", 400, 712),
-    "bathroom-vanity-2.JPG": ("bathroom-vanity-2-thumb.webp", 400, 712),
-    "bathroom-shower.JPG": ("bathroom-shower-thumb.webp", 400, 533),
-    "amenities.JPG": ("amenities-thumb.webp", 400, 712),
+    "intro-bg1.jpg": (webp_for_src("intro-bg1.jpg", thumb=True), 400, 533),
+    "intro-bg2.jpg": (webp_for_src("intro-bg2.jpg", thumb=True), 400, 533),
+    "double-room-overview.JPG": (webp_for_src("double-room-overview.JPG", thumb=True), 400, 533),
+    "bedroom-art.JPG": (webp_for_src("bedroom-art.JPG", thumb=True), 400, 712),
+    "bedroom-garden-view.JPG": (webp_for_src("bedroom-garden-view.JPG", thumb=True), 400, 711),
+    "twin-room-pendant.JPG": (webp_for_src("twin-room-pendant.JPG", thumb=True), 400, 300),
+    "twin-room-warm.JPG": (webp_for_src("twin-room-warm.JPG", thumb=True), 400, 711),
+    "vanity-wardrobe.JPG": (webp_for_src("vanity-wardrobe.JPG", thumb=True), 400, 712),
+    "bathroom-vanity-2.JPG": (webp_for_src("bathroom-vanity-2.JPG", thumb=True), 400, 712),
+    "bathroom-shower.JPG": (webp_for_src("bathroom-shower.JPG", thumb=True), 400, 533),
+    "amenities.JPG": (webp_for_src("amenities.JPG", thumb=True), 400, 712),
 }
 
 BG_IMAGE_SET: dict[str, tuple[str, str]] = {
-    "hero.jpg": ("hero.webp", "hero.jpg"),
-    "intro-bg1.jpg": ("intro-bg1.webp", "intro-bg1.jpg"),
-    "3285.JPG": ("3285.webp", "3285.JPG"),
-    "intro-bg2.jpg": ("intro-bg2.webp", "intro-bg2.jpg"),
-    "3280.JPG": ("3280.webp", "3280.JPG"),
-    "story-bg.jpg": ("story-bg.webp", "story-bg.jpg"),
-    "practical-bg.jpg": ("practical-bg.webp", "practical-bg.jpg"),
-    "courses-bg.jpg": ("courses-bg.webp", "courses-bg.jpg"),
+    "hero.jpg": (webp_for_src("hero.jpg"), "hero.jpg"),
+    "intro-bg1.jpg": (webp_for_src("intro-bg1.jpg"), "intro-bg1.jpg"),
+    "3285.JPG": (webp_for_src("3285.JPG"), "3285.JPG"),
+    "intro-bg2.jpg": (webp_for_src("intro-bg2.jpg"), "intro-bg2.jpg"),
+    "3280.JPG": (webp_for_src("3280.JPG"), "3280.JPG"),
+    "story-bg.jpg": (webp_for_src("story-bg.jpg"), "story-bg.jpg"),
+    "practical-bg.jpg": (webp_for_src("practical-bg.jpg"), "practical-bg.jpg"),
+    "courses-bg.jpg": (webp_for_src("courses-bg.jpg"), "courses-bg.jpg"),
 }
 
 
@@ -93,8 +95,7 @@ def main() -> None:
     # Preload hero WebP (LCP) + JPEG fallback for older browsers
     html = html.replace(
         '<link rel="preload" as="image" href="hero.jpg" fetchpriority="high" />',
-        '<link rel="preload" as="image" href="hero.webp" type="image/webp" fetchpriority="high" />\n'
-        '  <link rel="preload" as="image" href="hero.jpg" fetchpriority="high" />',
+        f'<link rel="preload" as="image" href="{webp_for_src("hero.jpg")}" type="image/webp" fetchpriority="high" />',
     )
 
     # Non-blocking Google Fonts
