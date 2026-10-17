@@ -30,7 +30,7 @@
   <link rel="canonical" href="https://paradisetulamben.com/" />
 
   <!-- ── Performance: preload LCP hero image + font hints ── -->
-  <link rel="preload" as="image" href="tulamben-sunset-palm-trees-hero.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="usat-liberty-wreck-fish-tulamben-1200.webp" imagesrcset="usat-liberty-wreck-fish-tulamben-800.webp 800w, usat-liberty-wreck-fish-tulamben-1200.webp 1200w" imagesizes="(min-width: 900px) 50vw, 100vw" type="image/webp" fetchpriority="high" />
   <link rel="dns-prefetch" href="https://wa.me" />
   <link rel="alternate" hreflang="en"       href="https://paradisetulamben.com/?lang=en" />
   <link rel="alternate" hreflang="zh"       href="https://paradisetulamben.com/?lang=zh" />
@@ -243,66 +243,45 @@
       .nav-links a { display: block; padding: 16px 0; font-size: 0.75rem; letter-spacing: 3px; border-bottom: none; }
     }
 
-    /* ── Hero ── */
-    #home { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .hero-bg-outer { position: absolute; inset: 0; overflow: hidden; will-change: transform; }
-    .hero-bg {
-      position: absolute; inset: -12%;
-      animation: slowZoom 26s ease-in-out infinite alternate;
-    }
-    .hero-bg picture { display: block; width: 100%; height: 100%; }
-    .hero-bg img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center;
-      display: block;
-    }
-    @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.09); } }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(4,17,30,0.38) 0%, rgba(5,28,44,0.62) 55%, rgba(4,17,30,0.92) 100%);
-    }
-    .bubbles { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
-    .bubble {
-      position: absolute; bottom: -60px; border-radius: 50%;
-      background: rgba(0,200,232,0.08); border: 1px solid rgba(0,200,232,0.14);
-      animation: rise linear infinite;
-    }
-    @keyframes rise {
-      0%   { transform: translateY(0) translateX(0); opacity: 0.8; }
-      50%  { transform: translateY(-45vh) translateX(18px); opacity: 0.35; }
-      100% { transform: translateY(-100vh) translateX(-8px); opacity: 0; }
-    }
-    .hero-content { position: relative; z-index: 2; text-align: center; animation: fadeUp 1.5s cubic-bezier(0.4,0,0.2,1) forwards; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(44px); } to { opacity: 1; transform: translateY(0); } }
-    .hero-eyebrow {
-      font-family: var(--ui); font-size: 0.68rem; letter-spacing: 6px; text-transform: uppercase;
-      color: var(--sand); margin-bottom: 28px; opacity: 0.88;
-    }
+    /* ── Hero (B layout: photo on top, text below; split on desktop) ── */
+    #home { display: grid; grid-template-rows: auto 1fr; min-height: 100vh; min-height: 100svh; background: var(--navy); }
+    .hero-photo { position: relative; height: 46vh; height: 46svh; overflow: hidden; }
+    .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; }
+    .hero-photo::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(4,17,30,0.45), rgba(4,17,30,0) 40%, rgba(4,17,30,0.6)); }
+    .hero-cap { position: absolute; left: 16px; bottom: 12px; z-index: 2; font-family: var(--ui); font-size: 11px; letter-spacing: 0.5px; color: rgba(255,255,255,0.75); }
+    .hero-content { padding: 24px 22px 30px; display: grid; gap: 16px; align-content: start; background: var(--navy); }
     .hero-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(4.5rem, 14vw, 12rem); font-weight: 700;
-      line-height: 0.86; letter-spacing: -3px; text-transform: uppercase;
+      font-size: 36px; font-weight: 700; line-height: 1; text-transform: uppercase;
       color: var(--white);
     }
-    .hero-title .accent { color: var(--accent); font-style: italic; }
-    .hero-subtitle {
-      margin-top: 30px;
-      font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
-      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
-      color: rgba(232,244,248,0.72); letter-spacing: 1px;
+    .hero-title .brand { display: block; font-family: var(--ui); font-size: 14px; font-weight: 700; letter-spacing: 3px; color: #d9bd86; margin-bottom: 10px; }
+    .hero-title .accent { color: var(--accent); }
+    .hero-value { font-family: var(--ui); font-size: 17px; line-height: 1.55; color: #f1f7fa; max-width: 520px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex: 1 1 100%;
+      min-height: 50px; padding: 0 24px; border-radius: 6px;
+      font-family: var(--ui); font-weight: 700; font-size: 15px; text-decoration: none;
     }
-    .hero-location {
-      margin-top: 34px; display: inline-flex; align-items: center; gap: 14px;
-      font-family: var(--ui); font-size: 0.62rem; letter-spacing: 3.5px; text-transform: uppercase; color: var(--sand);
+    .hero-btn-wa { background: #25d366; color: #04111e; }
+    .hero-btn-ghost { border: 1.5px solid #fff; color: #fff; }
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; font-family: var(--ui); font-size: 13px; color: #e8f4f8; }
+    .hero-chips li::before { content: '✓ '; color: var(--accent); font-weight: 700; }
+    .nav-logo img { width: 52px; height: 52px; }
+    @media (max-width: 768px) {
+      .lang-switcher { order: 2; }
+      .nav-hamburger { order: 3; margin-left: 6px; }
     }
-    .hero-location::before, .hero-location::after { content: ''; display: block; width: 32px; height: 1px; background: var(--sand); opacity: 0.5; }
-    .hero-scroll {
-      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-      color: rgba(255,255,255,0.35); font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase;
-      font-family: var(--ui); animation: bounce 2.2s ease infinite;
+    @media (min-width: 900px) {
+      #home { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+      .hero-photo { height: 100vh; order: 2; }
+      .hero-content { align-content: center; padding: 0 6vw; gap: 22px; }
+      .hero-title { font-size: 60px; }
+      .hero-title .brand { font-size: 16px; }
+      .hero-btn { flex: 0 0 auto; }
+      .nav-logo img { width: 64px; height: 64px; }
     }
-    @keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 55% { transform: translateX(-50%) translateY(9px); } }
-    .scroll-line { width: 1px; height: 52px; background: linear-gradient(to bottom, transparent, var(--accent)); }
 
     /* ── Trust Bar ── */
     .trust-bar {
@@ -865,7 +844,6 @@
       .footer-contact, footer { padding: 28px 28px; }
     }
     @media (max-width: 580px) {
-      .hero-title { font-size: 3.6rem; letter-spacing: -1px; }
       .prac-grid { grid-template-columns: 1fr; }
       .stat-grid { grid-template-columns: 1fr 1fr; }
       .facts-list { grid-template-columns: 1fr; }
@@ -992,25 +970,18 @@
 
   <!-- ── Hero ── -->
   <section id="home">
-    <div class="hero-bg-outer" id="heroBgOuter">
-      <div class="hero-bg">
-        <picture>
-          <source srcset="tulamben-sunset-palm-trees-hero.webp" type="image/webp" />
-          <img src="hero.jpg" alt="" width="1279" height="1706" fetchpriority="high" decoding="async" />
-        </picture>
-      </div>
+    <div class="hero-photo">
+      <img src="usat-liberty-wreck-fish-tulamben-1200.webp" srcset="usat-liberty-wreck-fish-tulamben-800.webp 800w, usat-liberty-wreck-fish-tulamben-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Fish schooling around the USAT Liberty Wreck, Tulamben, Bali" width="1200" height="1600" fetchpriority="high" />
+      <p class="hero-cap">📍 USAT Liberty Wreck, Tulamben, Bali</p>
     </div>
-    <div class="hero-overlay"></div>
-    <div class="bubbles" id="bubbles"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Official Site &nbsp;·&nbsp; Tulamben, Bali, Indonesia</p>
-      <h1 class="hero-title">PARADISE<br>DIVE<br><span class="accent">TULAMBEN</span><span class="sr-only"> — Scuba Diving in Tulamben, Bali. Dive the USAT Liberty Wreck.</span></h1>
-      <p class="hero-subtitle">Walk off the beach. Descend into legend.</p>
-      <div class="hero-location">Bali &nbsp;·&nbsp; Indonesia &nbsp;·&nbsp; 8°17'S 115°35'E</div>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      <span class="scroll-label">SCROLL</span>
+      <h1 class="hero-title"><span class="brand">Paradise Dive Tulamben:</span> Scuba Diving in Tulamben, Bali &amp; the <span class="accent">USAT Liberty Wreck</span></h1>
+      <p class="hero-value">Walk off the beach and dive one of the world's most famous wrecks. PADI courses and guided fun dives, max 4 divers per guide.</p>
+      <div class="hero-btns">
+        <a class="hero-btn hero-btn-wa" href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I'd%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="hero-btn hero-btn-ghost" href="#courses">See prices</a>
+      </div>
+      <ul class="hero-chips"><li>PADI Certified Instructors</li><li>Free photos &amp; videos</li><li>Equipment included</li></ul>
     </div>
   </section>
 
@@ -1550,7 +1521,6 @@
         <div class="footer-contact-label">WhatsApp</div>
         <div class="footer-contact-value">
           <a href="https://wa.me/60128001317?text=Hi%20Paradise%20Dive%20Tulamben!%20I'd%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+60 12-8001317</a><br>
-          <a href="https://wa.me/628133659411?text=Hi%20Paradise%20Dive%20Tulamben!%20I'd%20like%20to%20book%20a%20dive.%20Please%20let%20me%20know%20your%20availability%20%F0%9F%A4%BF" target="_blank" rel="noopener">+62 813-3659-411</a><br>
           Instant booking confirmation
         </div>
       </div>
@@ -1857,18 +1827,6 @@
        SCRIPTS
   ══════════════════════════════════════════════ -->
   <script>
-    /* ── Bubbles ── */
-    (function() {
-      const bc = document.getElementById('bubbles');
-      for (let i = 0; i < 20; i++) {
-        const b = document.createElement('div');
-        b.className = 'bubble';
-        const s = 5 + Math.random() * 20;
-        b.style.cssText = `width:${s}px;height:${s}px;left:${Math.random()*100}%;animation-duration:${7+Math.random()*14}s;animation-delay:${Math.random()*12}s;`;
-        bc.appendChild(b);
-      }
-    })();
-
     /* ── Nav: scroll + active link ── */
     const navbar = document.getElementById('navbar');
     const sections = document.querySelectorAll('section[id], div.trust-bar');
@@ -1910,25 +1868,6 @@
           btn.setAttribute('aria-expanded', 'false');
         }
       });
-    })();
-
-    /* ── Hero Parallax ── */
-    (function() {
-      const outer = document.getElementById('heroBgOuter');
-      if (!outer) return;
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            const scrolled = window.scrollY;
-            if (scrolled < window.innerHeight * 1.5) {
-              outer.style.transform = `translateY(${scrolled * 0.22}px)`;
-            }
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, { passive: true });
     })();
 
     /* ── Accordion ── */
