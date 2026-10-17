@@ -404,22 +404,22 @@
     #intro { padding: 110px 60px; position: relative; display: flex; align-items: flex-start; gap: 80px; flex-wrap: wrap; overflow: hidden; }
     .intro-slide { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity 1.5s ease-in-out; opacity: 0; }
     .intro-slide.active { opacity: 1; }
-    .intro-slide:nth-child(1) { background-image: url('intro-bg1.jpg');
+    .intro-slide:nth-child(1).bg-loaded { background-image: url('intro-bg1.jpg');
       background-image: image-set(
         url('infinity-pool-ocean-view.webp') type('image/webp'),
         url('intro-bg1.jpg') type('image/jpeg')
       ); }
-    .intro-slide:nth-child(2) { background-image: url('3285.JPG');
+    .intro-slide:nth-child(2).bg-loaded { background-image: url('3285.JPG');
       background-image: image-set(
         url('intro-section-slide-2.webp') type('image/webp'),
         url('3285.JPG') type('image/jpeg')
       ); }
-    .intro-slide:nth-child(3) { background-image: url('intro-bg2.jpg');
+    .intro-slide:nth-child(3).bg-loaded { background-image: url('intro-bg2.jpg');
       background-image: image-set(
         url('aerial-beachfront-property.webp') type('image/webp'),
         url('intro-bg2.jpg') type('image/jpeg')
       ); }
-    .intro-slide:nth-child(4) { background-image: url('3280.JPG');
+    .intro-slide:nth-child(4).bg-loaded { background-image: url('3280.JPG');
       background-image: image-set(
         url('intro-section-slide-4.webp') type('image/webp'),
         url('3280.JPG') type('image/jpeg')
@@ -437,12 +437,14 @@
     #story {
       padding: 0;
       background: center/cover no-repeat;
+      position: relative; min-height: 540px; display: flex; align-items: center;
+    }
+    #story.bg-loaded {
       background-image: url('story-bg.jpg');
       background-image: image-set(
         url('usat-liberty-story-section-background.webp') type('image/webp'),
         url('story-bg.jpg') type('image/jpeg')
       );
-      position: relative; min-height: 540px; display: flex; align-items: center;
     }
     #story::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,17,30,0.93) 35%, rgba(4,17,30,0.52) 100%); }
     .story-inner { position: relative; z-index: 1; padding: 110px 60px; max-width: 640px; }
@@ -557,11 +559,14 @@
     /* ── Practical ── */
     #practical { padding: 110px 60px;
       background: center/cover no-repeat fixed;
+      position: relative; }
+    #practical.bg-loaded {
       background-image: url('practical-bg.jpg');
       background-image: image-set(
         url('before-you-dive-section-background.webp') type('image/webp'),
         url('practical-bg.jpg') type('image/jpeg')
-      ); position: relative; }
+      );
+    }
     #practical::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(4,17,30,0.93) 0%, rgba(8,131,149,0.48) 100%); }
     .prac-inner { position: relative; z-index: 1; }
     .prac-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.4rem, 4.8vw, 3.6rem); font-weight: 700; text-transform: uppercase; margin-bottom: 18px; }
@@ -613,11 +618,14 @@
     /* ── Pricing ── */
     #courses { padding: 110px 60px;
       background: center/cover no-repeat fixed;
+      position: relative; }
+    #courses.bg-loaded {
       background-image: url('courses-bg.jpg');
       background-image: image-set(
         url('first-breath-underwater-section-background.webp') type('image/webp'),
         url('courses-bg.jpg') type('image/jpeg')
-      ); position: relative; }
+      );
+    }
     #courses::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(4,17,30,0.90) 0%, rgba(5,28,44,0.78) 50%, rgba(4,17,30,0.88) 100%); }
     #courses > * { position: relative; z-index: 1; }
     .courses-header { max-width: 640px; margin-bottom: 64px; }
@@ -850,6 +858,17 @@
       .tips-grid { grid-template-columns: 1fr !important; }
     }
   </style>
+  <noscript>
+    <style>
+      #courses.bg-loaded, #courses { background-image: url('courses-bg.jpg'); background-image: image-set(url('first-breath-underwater-section-background.webp') type('image/webp'), url('courses-bg.jpg') type('image/jpeg')); }
+      #practical.bg-loaded, #practical { background-image: url('practical-bg.jpg'); background-image: image-set(url('before-you-dive-section-background.webp') type('image/webp'), url('practical-bg.jpg') type('image/jpeg')); }
+      #story.bg-loaded, #story { background-image: url('story-bg.jpg'); background-image: image-set(url('usat-liberty-story-section-background.webp') type('image/webp'), url('story-bg.jpg') type('image/jpeg')); }
+      .intro-slide:nth-child(1).bg-loaded, .intro-slide:nth-child(1) { background-image: url('intro-bg1.jpg'); background-image: image-set(url('infinity-pool-ocean-view.webp') type('image/webp'), url('intro-bg1.jpg') type('image/jpeg')); }
+      .intro-slide:nth-child(2).bg-loaded, .intro-slide:nth-child(2) { background-image: url('3285.JPG'); background-image: image-set(url('intro-section-slide-2.webp') type('image/webp'), url('3285.JPG') type('image/jpeg')); }
+      .intro-slide:nth-child(3).bg-loaded, .intro-slide:nth-child(3) { background-image: url('intro-bg2.jpg'); background-image: image-set(url('aerial-beachfront-property.webp') type('image/webp'), url('intro-bg2.jpg') type('image/jpeg')); }
+      .intro-slide:nth-child(4).bg-loaded, .intro-slide:nth-child(4) { background-image: url('3280.JPG'); background-image: image-set(url('intro-section-slide-4.webp') type('image/webp'), url('3280.JPG') type('image/jpeg')); }
+    </style>
+  </noscript>
   <!-- ── FAQ Schema (GEO + SEO) ── -->
   <script type="application/ld+json">
   {
@@ -1827,6 +1846,24 @@
        SCRIPTS
   ══════════════════════════════════════════════ -->
   <script>
+    /* ── Deferred section backgrounds (below-the-fold) ── */
+    (function() {
+      var targets = document.querySelectorAll('#courses, #practical, #story');
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach(function(el) { el.classList.add('bg-loaded'); });
+        document.querySelectorAll('#intro .intro-slide').forEach(function(el) { el.classList.add('bg-loaded'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('bg-loaded');
+          io.unobserve(e.target);
+        });
+      }, { rootMargin: '300px 0px' });
+      targets.forEach(function(el) { io.observe(el); });
+    })();
+
     /* ── Nav: scroll + active link ── */
     const navbar = document.getElementById('navbar');
     const sections = document.querySelectorAll('section[id], div.trust-bar');
@@ -1891,11 +1928,33 @@
 
     /* ── Intro slideshow ── */
     (function() {
+      const intro = document.getElementById('intro');
       const slides = document.querySelectorAll('#intro .intro-slide');
       let current = 0;
-      setInterval(() => {
+
+      function loadIntroSlideBg(idx) {
+        if (slides[idx]) slides[idx].classList.add('bg-loaded');
+      }
+
+      if (!('IntersectionObserver' in window) || !intro) {
+        slides.forEach(function(s) { s.classList.add('bg-loaded'); });
+      } else {
+        const introIo = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (!e.isIntersecting) return;
+            loadIntroSlideBg(0);
+            loadIntroSlideBg(1);
+            introIo.disconnect();
+          });
+        }, { rootMargin: '300px 0px' });
+        introIo.observe(intro);
+      }
+
+      setInterval(function() {
         slides[current].classList.remove('active');
         current = (current + 1) % slides.length;
+        loadIntroSlideBg(current);
+        loadIntroSlideBg((current + 1) % slides.length);
         slides[current].classList.add('active');
       }, 3500);
     })();
