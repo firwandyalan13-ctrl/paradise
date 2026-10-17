@@ -1114,7 +1114,7 @@
         This is diving the way it should be.
       </p>
       <p class="section-body intro-room-body" style="max-width:540px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(196,164,106,0.18);">When the dive is done, your air-conditioned room is steps away — garden views, a wet-room shower, and Sensatia Botanical toiletries waiting for you. Double and twin options available.</p>
-      <button class="btn-room-tour" type="button">
+      <button class="btn-room-tour" onclick="document.getElementById('room-tour-modal').classList.add('open')">
         <svg class="rt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         <span class="room-btn-text">View Room Tour</span>
       </button>
@@ -1599,47 +1599,47 @@
 
     <div class="room-modal-stage">
       <div class="room-modal-img active" data-index="0">
-        <picture><source data-srcset="infinity-pool-ocean-view.webp" type="image/webp"><img data-src="intro-bg1.jpg" alt="Infinity Pool &amp; Ocean View" width="1280" height="1707" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="infinity-pool-ocean-view.webp" type="image/webp"><img src="intro-bg1.jpg" alt="Infinity Pool &amp; Ocean View" width="1280" height="1707" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Infinity Pool &amp; Ocean View</div>
       </div>
       <div class="room-modal-img" data-index="1">
-        <picture><source data-srcset="aerial-beachfront-property.webp" type="image/webp"><img data-src="intro-bg2.jpg" alt="Aerial — Beachfront Property" width="1080" height="1440" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="aerial-beachfront-property.webp" type="image/webp"><img src="intro-bg2.jpg" alt="Aerial — Beachfront Property" width="1080" height="1440" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Aerial — Beachfront Property</div>
       </div>
       <div class="room-modal-img" data-index="2">
-        <picture><source data-srcset="double-room-overview.webp" type="image/webp"><img data-src="double-room-overview.JPG" alt="Double Room — Overview" width="1200" height="1600" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="double-room-overview.webp" type="image/webp"><img src="double-room-overview.JPG" alt="Double Room — Overview" width="1200" height="1600" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Double Room — Overview</div>
       </div>
       <div class="room-modal-img" data-index="3">
-        <picture><source data-srcset="double-room-balinese-artwork.webp" type="image/webp"><img data-src="bedroom-art.JPG" alt="Double Room — Balinese Artwork" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="double-room-balinese-artwork.webp" type="image/webp"><img src="bedroom-art.JPG" alt="Double Room — Balinese Artwork" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Double Room — Balinese Artwork</div>
       </div>
       <div class="room-modal-img" data-index="4">
-        <picture><source data-srcset="double-room-garden-view.webp" type="image/webp"><img data-src="bedroom-garden-view.JPG" alt="Double Room — Garden View" width="1200" height="2134" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="double-room-garden-view.webp" type="image/webp"><img src="bedroom-garden-view.JPG" alt="Double Room — Garden View" width="1200" height="2134" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Double Room — Garden View</div>
       </div>
       <div class="room-modal-img" data-index="5">
-        <picture><source data-srcset="twin-room-rattan-lighting.webp" type="image/webp"><img data-src="twin-room-pendant.JPG" alt="Twin Room — Rattan Lighting" width="1200" height="900" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="twin-room-rattan-lighting.webp" type="image/webp"><img src="twin-room-pendant.JPG" alt="Twin Room — Rattan Lighting" width="1200" height="900" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Twin Room — Rattan Pendant Lights</div>
       </div>
       <div class="room-modal-img" data-index="6">
-        <picture><source data-srcset="twin-room-garden-views.webp" type="image/webp"><img data-src="twin-room-warm.JPG" alt="Twin Room — Garden Views" width="1200" height="2133" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="twin-room-garden-views.webp" type="image/webp"><img src="twin-room-warm.JPG" alt="Twin Room — Garden Views" width="1200" height="2133" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Twin Room — Garden Views</div>
       </div>
       <div class="room-modal-img" data-index="7">
-        <picture><source data-srcset="room-amenities-wardrobe.webp" type="image/webp"><img data-src="vanity-wardrobe.JPG" alt="Room Amenities &amp; Wardrobe" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="room-amenities-wardrobe.webp" type="image/webp"><img src="vanity-wardrobe.JPG" alt="Room Amenities &amp; Wardrobe" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Room Amenities &amp; Wardrobe</div>
       </div>
       <div class="room-modal-img" data-index="8">
-        <picture><source data-srcset="bathroom-vanity.webp" type="image/webp"><img data-src="bathroom-vanity-2.JPG" alt="Bathroom Vanity" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="bathroom-vanity.webp" type="image/webp"><img src="bathroom-vanity-2.JPG" alt="Bathroom Vanity" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Bathroom Vanity</div>
       </div>
       <div class="room-modal-img" data-index="9">
-        <picture><source data-srcset="bathroom-wet-room-shower.webp" type="image/webp"><img data-src="bathroom-shower.JPG" alt="Bathroom — Wet Room Shower" width="1200" height="1600" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="bathroom-wet-room-shower.webp" type="image/webp"><img src="bathroom-shower.JPG" alt="Bathroom — Wet Room Shower" width="1200" height="1600" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Bathroom — Wet Room Shower</div>
       </div>
       <div class="room-modal-img" data-index="10">
-        <picture><source data-srcset="sensatia-botanical-toiletries.webp" type="image/webp"><img data-src="amenities.JPG" alt="Sensatia Botanical Toiletries" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
+        <picture><source srcset="sensatia-botanical-toiletries.webp" type="image/webp"><img src="amenities.JPG" alt="Sensatia Botanical Toiletries" width="1200" height="2135" loading="lazy" decoding="async" /></picture>
         <div class="room-modal-caption">Sensatia Botanical Toiletries</div>
       </div>
 
@@ -1649,17 +1649,17 @@
 
     <!-- Thumbnails -->
     <div class="room-modal-thumbs" id="roomThumbs">
-      <div class="room-thumb active" data-index="0" onclick="roomGoTo(0)"><picture><source data-srcset="infinity-pool-ocean-view-thumb.webp" type="image/webp"><img data-src="intro-bg1.jpg" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="1" onclick="roomGoTo(1)"><picture><source data-srcset="aerial-beachfront-property-thumb.webp" type="image/webp"><img data-src="intro-bg2.jpg" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="2" onclick="roomGoTo(2)"><picture><source data-srcset="double-room-overview-thumb.webp" type="image/webp"><img data-src="double-room-overview.JPG" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="3" onclick="roomGoTo(3)"><picture><source data-srcset="double-room-balinese-artwork-thumb.webp" type="image/webp"><img data-src="bedroom-art.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="4" onclick="roomGoTo(4)"><picture><source data-srcset="double-room-garden-view-thumb.webp" type="image/webp"><img data-src="bedroom-garden-view.JPG" alt="" width="400" height="711" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="5" onclick="roomGoTo(5)"><picture><source data-srcset="twin-room-rattan-lighting-thumb.webp" type="image/webp"><img data-src="twin-room-pendant.JPG" alt="" width="400" height="300" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="6" onclick="roomGoTo(6)"><picture><source data-srcset="twin-room-garden-views-thumb.webp" type="image/webp"><img data-src="twin-room-warm.JPG" alt="" width="400" height="711" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="7" onclick="roomGoTo(7)"><picture><source data-srcset="room-amenities-wardrobe-thumb.webp" type="image/webp"><img data-src="vanity-wardrobe.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="8" onclick="roomGoTo(8)"><picture><source data-srcset="bathroom-vanity-thumb.webp" type="image/webp"><img data-src="bathroom-vanity-2.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="9" onclick="roomGoTo(9)"><picture><source data-srcset="bathroom-wet-room-shower-thumb.webp" type="image/webp"><img data-src="bathroom-shower.JPG" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
-      <div class="room-thumb" data-index="10" onclick="roomGoTo(10)"><picture><source data-srcset="sensatia-botanical-toiletries-thumb.webp" type="image/webp"><img data-src="amenities.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb active" data-index="0" onclick="roomGoTo(0)"><picture><source srcset="infinity-pool-ocean-view-thumb.webp" type="image/webp"><img src="intro-bg1.jpg" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="1" onclick="roomGoTo(1)"><picture><source srcset="aerial-beachfront-property-thumb.webp" type="image/webp"><img src="intro-bg2.jpg" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="2" onclick="roomGoTo(2)"><picture><source srcset="double-room-overview-thumb.webp" type="image/webp"><img src="double-room-overview.JPG" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="3" onclick="roomGoTo(3)"><picture><source srcset="double-room-balinese-artwork-thumb.webp" type="image/webp"><img src="bedroom-art.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="4" onclick="roomGoTo(4)"><picture><source srcset="double-room-garden-view-thumb.webp" type="image/webp"><img src="bedroom-garden-view.JPG" alt="" width="400" height="711" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="5" onclick="roomGoTo(5)"><picture><source srcset="twin-room-rattan-lighting-thumb.webp" type="image/webp"><img src="twin-room-pendant.JPG" alt="" width="400" height="300" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="6" onclick="roomGoTo(6)"><picture><source srcset="twin-room-garden-views-thumb.webp" type="image/webp"><img src="twin-room-warm.JPG" alt="" width="400" height="711" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="7" onclick="roomGoTo(7)"><picture><source srcset="room-amenities-wardrobe-thumb.webp" type="image/webp"><img src="vanity-wardrobe.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="8" onclick="roomGoTo(8)"><picture><source srcset="bathroom-vanity-thumb.webp" type="image/webp"><img src="bathroom-vanity-2.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="9" onclick="roomGoTo(9)"><picture><source srcset="bathroom-wet-room-shower-thumb.webp" type="image/webp"><img src="bathroom-shower.JPG" alt="" width="400" height="533" loading="lazy" decoding="async" /></picture></div>
+      <div class="room-thumb" data-index="10" onclick="roomGoTo(10)"><picture><source srcset="sensatia-botanical-toiletries-thumb.webp" type="image/webp"><img src="amenities.JPG" alt="" width="400" height="712" loading="lazy" decoding="async" /></picture></div>
     </div>
   </div>
 
@@ -1863,19 +1863,6 @@
       }, { rootMargin: '300px 0px' });
       targets.forEach(function(el) { io.observe(el); });
     })();
-
-    /* ── Hydrate deferred <picture> sources (room tour carousel) ── */
-    window.hydrateDeferredPicture = function(root) {
-      if (!root) return;
-      root.querySelectorAll('img[data-src]').forEach(function(img) {
-        if (img.getAttribute('src')) return;
-        img.setAttribute('src', img.getAttribute('data-src'));
-      });
-      root.querySelectorAll('source[data-srcset]').forEach(function(source) {
-        if (source.getAttribute('srcset')) return;
-        source.setAttribute('srcset', source.getAttribute('data-srcset'));
-      });
-    };
 
     /* ── Nav: scroll + active link ── */
     const navbar = document.getElementById('navbar');
@@ -2093,14 +2080,6 @@
     (function() {
       const TOTAL = 11;
       let current = 0;
-      const modal = document.getElementById('room-tour-modal');
-
-      function hydrateRoomIndex(idx) {
-        const slide = document.querySelector('.room-modal-img[data-index="' + idx + '"]');
-        const thumb = document.querySelector('.room-thumb[data-index="' + idx + '"]');
-        if (slide) hydrateDeferredPicture(slide);
-        if (thumb) hydrateDeferredPicture(thumb);
-      }
 
       window.roomGoTo = function(idx) {
         const imgs = document.querySelectorAll('.room-modal-img');
@@ -2108,8 +2087,6 @@
         imgs[current].classList.remove('active');
         thumbs[current].classList.remove('active');
         current = (idx + TOTAL) % TOTAL;
-        hydrateRoomIndex(current);
-        hydrateRoomIndex((current + 1) % TOTAL);
         imgs[current].classList.add('active');
         thumbs[current].classList.add('active');
         document.getElementById('roomCounter').textContent = (current + 1) + ' / ' + TOTAL;
@@ -2117,26 +2094,17 @@
 
       window.roomNav = function(dir) { roomGoTo(current + dir); };
 
-      window.openRoomTourModal = function() {
-        modal.classList.add('open');
-        hydrateRoomIndex(current);
-        hydrateRoomIndex((current + 1) % TOTAL);
-      };
-
-      document.querySelectorAll('.btn-room-tour').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          openRoomTourModal();
-        });
-      });
-
       // keyboard nav inside modal
       document.addEventListener('keydown', e => {
+        const modal = document.getElementById('room-tour-modal');
         if (!modal.classList.contains('open')) return;
         if (e.key === 'ArrowRight') roomNav(1);
         if (e.key === 'ArrowLeft')  roomNav(-1);
         if (e.key === 'Escape') modal.classList.remove('open');
       });
+
+      // reset to slide 1 when reopened
+      document.getElementById('room-tour-modal').addEventListener('transitionend', () => {});
     })();
 
     /* ── Gallery drag scroll ── */
